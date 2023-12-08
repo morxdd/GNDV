@@ -52,7 +52,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid blue;
+    border-bottom: 2px solid blue;
 }
 .arrowKey {
     width: 20px;
@@ -66,11 +66,15 @@ nav {
     background-color: #a0c;
     width: 100%;
     height: 40px;
-    width: 100%;
     display: flex;
     justify-content: start;
     align-items: center;
     border-bottom: 1px solid blue;
+}
+.dropdown-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-out;
 }
 .dropdown-content > li {
     background-color: #ac0;
@@ -116,10 +120,10 @@ nav {
         display: flex; /* 保持为 flex 布局 */
         flex-direction: row; /* 水平排列 */
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         background-color: #6af; /* 背景颜色 */
-        /* 其他必要的样式调整 */
-        padding: 0;
+        box-sizing: border-box;
+        padding: 0 20px 0 20px;
     }
     #xx {
         display: none;
@@ -127,7 +131,28 @@ nav {
     .texts {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        position: relative;
     }
+    .texts li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #000;
+        width: calc(20% - 10px);
+        height: 60px;
+    }
+    .texts li a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #000;
+        height: 60px;
+    }
+
     .icons {
         display: flex;
         flex-direction: row;
@@ -148,7 +173,27 @@ nav {
     #hamburger-icon {
       display: none;
     }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        width: 200px;
+        height: 300px;
+        top: 0;
+        left: 0;
+    }
+    .dropdown-content li{
+        width: 200px;
+        background-color: #a0c;
+    }
+    .dropdown:hover + .dropdown-content {
+        display: block;
+        top: 20px;
+        background-color: #6a3;    }
+
 }
+
+    
+
 
 @media screen and (min-width: 1500px) {
     nav {

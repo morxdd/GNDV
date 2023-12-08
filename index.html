@@ -24,7 +24,7 @@
             <div id="xx"><img src="images/icons/xx.svg" alt=""></div>
             <ul class="texts"> 
                 <!-- 這是下拉選單 -->
-                <li class="dropdown">
+                <li class="dropdown dropdownA">
                     <p>植物</p>
                     <div class="arrowKey">
                         <img src="images/icons/7613865.png" alt="">
@@ -39,7 +39,7 @@
                 <li><a href="#">護理指南</a></li>
                 <li><a href="#">服務</a></li>
                 <!-- 這是下拉選單 -->
-                <li class="dropdown">
+                <li class="dropdown dropdownB">
                     <p>關於</p>
                     <div class="arrowKey">
                         <img src="images/icons/7613865.png" alt="">
@@ -80,6 +80,31 @@
         menu.style.right = '0px'; // 显示
     }
 });
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach(function (dropdown) {
+            dropdown.addEventListener('click', function () {
+                // 每次点击时都检查视口宽度
+                if (window.innerWidth < 768) {
+                    var dropdownContent = this.nextElementSibling;
+
+                    if (dropdownContent.style.height && dropdownContent.style.height !== '0px') {
+                        dropdownContent.style.height = '0px'; // 收合下拉菜单
+                    } else {
+                        dropdownContent.style.height = dropdownContent.scrollHeight + 'px'; // 展开下拉菜单
+                    }
+                } 
+            });
+        });
+    });
+</script>
+<script>
+    
 </script>
 
 </body>
