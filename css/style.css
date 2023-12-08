@@ -6,8 +6,11 @@ nav {
     display: flex;
     background-color: #6a3;
     justify-content: space-between;
+    align-items: center;
     max-width: 1530px;
     z-index: 2;
+    align-items: center;
+    height: 40px;
 }
 #hamburger-icon {
     background-color: #f00;
@@ -20,12 +23,12 @@ nav {
 }
 #xx {
     background-color: #f00;
-    width: 20px;
+    width: 16px;
     display: flex;
     align-items: center;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
 }
 #xx img{
     width: 100%;
@@ -40,7 +43,43 @@ nav {
     background-color: #6af; /* 背景颜色 */
     transition: right 0.3s; /* 平滑过渡效果 */
     box-sizing: border-box;
-    padding: 40px;
+    padding: 40px 20px;
+}
+.texts > li{
+    background-color: #ca0;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid blue;
+}
+.arrowKey {
+    width: 20px;
+    transform: rotate(-90deg);
+}
+.arrowKey img{
+    width: 100%;
+}
+
+.texts > li > a{
+    background-color: #a0c;
+    width: 100%;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 1px solid blue;
+}
+.dropdown-content > li {
+    background-color: #ac0;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 1px solid red;
 }
 .iconbox {
     background-color: #fa0;
@@ -51,8 +90,11 @@ nav {
 }
 .logobox {
     width: 100px;
-    height: 60px;
+    height: 40px;
     background-color: #fa0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .logobox img {
     width: 100%;
@@ -60,6 +102,11 @@ nav {
   
 /* 大螢幕時顯示導覽列 */
 @media screen and (min-width: 768px) {
+    nav {
+        display: flex;
+        align-items: center;
+        height: 60px;
+    }
     #nav-menu {
         position: static; /* 不再固定位置 */
         top: 0px; /* 移除右侧位置设置 */
@@ -72,6 +119,10 @@ nav {
         justify-content: space-around;
         background-color: #6af; /* 背景颜色 */
         /* 其他必要的样式调整 */
+        padding: 0;
+    }
+    #xx {
+        display: none;
     }
     .texts {
         display: flex;
@@ -82,13 +133,17 @@ nav {
         flex-direction: row;
     }
     .logobox {
-        width: 150px;
+        width: 160px;
         height: 60px;
-        background-color: #fa0;
+        background-color: #faa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .logobox img {
         width: 100%;
         height: 100%;
+        display: block;
     }
     #hamburger-icon {
       display: none;
