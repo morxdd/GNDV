@@ -19,8 +19,9 @@
         <div class="logobox">
             <img src="images/logo/GreenDivLogo-06.svg" alt="logo">
         </div>
-        <div id="hamburger-icon">☰</div>
+        <div id="hamburger-icon"><img src="images/icons/ee.svg" alt=""></div>
         <div id="nav-menu">
+            <div id="xx"><img src="images/icons/xx.svg" alt=""></div>
             <ul class="texts"> 
                 <!-- 這是下拉選單 -->
                 <li>植物</li>
@@ -42,7 +43,7 @@
 
 
 <script>
-    //下方是點擊漢堡icon，選單打開/關閉的事件處理器
+    //點擊漢堡icon，選單打開/關閉的事件處理器
     document.getElementById('hamburger-icon').addEventListener('click', function() {
     var menu = document.getElementById('nav-menu');
     if (menu.style.right === '0px') {
@@ -51,7 +52,18 @@
         menu.style.right = '0px'; // 显示
     }
 });
-
 </script>
+<script>
+    //點擊叉叉icon，選單打開/關閉的事件處理器
+    document.getElementById('xx').addEventListener('click', function() {
+    var menu = document.getElementById('nav-menu');
+    if (menu.style.right === '0px') {
+        menu.style.right = '-100%'; // 隐藏
+    } else {
+        menu.style.right = '0px'; // 显示
+    }
+});
+</script>
+
 </body>
 </html>

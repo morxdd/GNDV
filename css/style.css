@@ -7,24 +7,40 @@ nav {
     background-color: #6a3;
     justify-content: space-between;
     max-width: 1530px;
-    z-index: 2
+    z-index: 2;
 }
 #hamburger-icon {
     background-color: #f00;
     width: 20px;
-    font-size: 40px;
-    
+    display: flex;
+    align-items: center;
+}
+#hamburger-icon img{
+    width: 100%;
+}
+#xx {
+    background-color: #f00;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+#xx img{
+    width: 100%;
 }
 #nav-menu {
     display: flex;
     flex-direction: column; /* 垂直排列菜单项 */
     position: fixed; /* 固定位置 */
     top: 0; /* 顶部对齐 */
-
     right: -100%; /* 初始在屏幕右侧外 */
     height: 100%; /* 全屏高度 */
     background-color: #6af; /* 背景颜色 */
     transition: right 0.3s; /* 平滑过渡效果 */
+    box-sizing: border-box;
+    padding: 40px;
 }
 .iconbox {
     background-color: #fa0;
