@@ -1,0 +1,99 @@
+/* 小螢幕時隱藏導覽列，只顯示漢堡圖標 */
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+nav {
+    display: flex;
+    background-color: #6a3;
+    justify-content: space-between;
+    max-width: 1530px;
+    z-index: 2
+}
+#hamburger-icon {
+    background-color: #f00;
+    width: 20px;
+    font-size: 40px;
+    
+}
+#nav-menu {
+    display: flex;
+    flex-direction: column; /* 垂直排列菜单项 */
+    position: fixed; /* 固定位置 */
+    top: 0; /* 顶部对齐 */
+
+    right: -100%; /* 初始在屏幕右侧外 */
+    height: 100%; /* 全屏高度 */
+    background-color: #6af; /* 背景颜色 */
+    transition: right 0.3s; /* 平滑过渡效果 */
+}
+.iconbox {
+    background-color: #fa0;
+    width: 20px;
+}
+.iconbox {
+    width: 100%;
+}
+.logobox {
+    width: 100px;
+    height: 60px;
+    background-color: #fa0;
+}
+.logobox img {
+    width: 100%;
+}
+  
+/* 大螢幕時顯示導覽列 */
+@media screen and (min-width: 768px) {
+    #nav-menu {
+        position: static; /* 不再固定位置 */
+        top: 0px; /* 移除右侧位置设置 */
+        right: 0;
+        height: 60px;
+        width: 100%;
+        display: flex; /* 保持为 flex 布局 */
+        flex-direction: row; /* 水平排列 */
+        align-items: center;
+        justify-content: space-around;
+        background-color: #6af; /* 背景颜色 */
+        /* 其他必要的样式调整 */
+    }
+    .texts {
+        display: flex;
+        flex-direction: row;
+    }
+    .icons {
+        display: flex;
+        flex-direction: row;
+    }
+    .logobox {
+        width: 150px;
+        height: 60px;
+        background-color: #fa0;
+    }
+    .logobox img {
+        width: 100%;
+        height: 100%;
+    }
+    #hamburger-icon {
+      display: none;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    nav {
+        margin: 0px auto 0px auto;
+        position: relative;
+        z-index: 2;
+    }
+    body::after {
+        content: '';
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 60px;
+        background-color: #60f;
+        z-index: 1;
+    }
+}

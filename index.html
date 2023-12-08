@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁 | 綠域植栽</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logobox">
+            <img src="images/logo/GreenDivLogo-06.svg" alt="logo">
+        </div>
+        <div id="hamburger-icon">☰</div>
+        <div id="nav-menu">
+            <ul class="texts"> 
+                <!-- 這是下拉選單 -->
+                <li>植物</li>
+                <li><a href="#">盆器與配件</a></li>
+                <li><a href="#">護理指南</a></li>
+                <li><a href="#">服務</a></li>
+                <!-- 這是下拉選單 -->
+                <li>關於</li>
+            </ul> 
+            <div class="icons">
+                <div class="iconbox"><a href="#"><img src="images/icons/serch.svg" alt=""></a></div>
+                <div class="iconbox"><a href="#"><img src="images/icons/SquirrelSetup.svg" alt=""></a></div>
+                <div class="iconbox"><a href="#"><img src="images/icons/shop.svg" alt=""></a></div>
+                
+
+            </div>
+        </div>
+      </nav>
+
+
+<script>
+    //下方是點擊漢堡icon，選單打開/關閉的事件處理器
+    document.getElementById('hamburger-icon').addEventListener('click', function() {
+    var menu = document.getElementById('nav-menu');
+    if (menu.style.right === '0px') {
+        menu.style.right = '-100%'; // 隐藏
+    } else {
+        menu.style.right = '0px'; // 显示
+    }
+});
+
+</script>
+</body>
+</html>
