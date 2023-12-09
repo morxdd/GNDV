@@ -498,7 +498,11 @@ nav {
     display: flex; /* 啟用flex布局 */
     align-items: center; /* 垂直居中 */
     justify-content: center; /* 水平居中 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
+}
+@media (width > 512px) {
+    .newpin-card {
+        width: calc(50% - 40px); /* 卡片寬度 */
+    }
 }
 @media (width > 768px) {
     .newpin-wrapper {
