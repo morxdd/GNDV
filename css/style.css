@@ -11,6 +11,10 @@ nav {
     z-index: 2;
     align-items: center;
     height: 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 #hamburger-icon {
     background-color: #f00;
@@ -44,7 +48,15 @@ nav {
     transition: right 0.3s; /* 平滑过渡效果 */
     box-sizing: border-box;
     padding: 40px 20px;
+    z-index: 40;
+    width: 100%;
 }
+@media (min-width: 450px) {
+    #nav-menu {
+        width: 450px;
+    }
+}
+
 .texts > li{
     background-color: #ca0;
     height: 40px;
@@ -263,9 +275,10 @@ nav {
 
 
 .banner-container {
-    margin: 60px 20px 20px 20px;
+    margin: 40px 20px 20px 20px;
     position: relative;
     max-width: 1520px;
+    background-color: chocolate;
 }
 .banner-imgbox{
     aspect-ratio: 1/1;
@@ -289,6 +302,7 @@ nav {
     top: 50%;
     transform: translate(50%, -50%);
     font-family: 'Noto Sans TC', sans-serif;
+    background-color: #af03;
 }
 .banner-textbox-title {
     font-size: 10vw;
@@ -297,6 +311,7 @@ nav {
     line-height: 1.36;
     font-weight: 600;
     text-shadow: 2px 4px 10px #0005;
+    background-color: #60f7;
 }
 .banner-textbox-text a {
     border-radius: 50px;
@@ -324,15 +339,19 @@ nav {
 @media (width > 768px) {
     .banner-container {
         border-radius: 48px;
+        margin: 60px 20px 20px 20px;
+        position: relative;
     }
     .banner-imgbox{
         aspect-ratio: 5/2;
     }
     .banner-textbox {
+        position: absolute;
         width: auto;
         right: 10vw;
         color: #fff;
         top: 50%;
+        right: 8%;
         transform: translate(0, -50%);
     }
     .banner-textbox-title {
@@ -341,7 +360,85 @@ nav {
 }
 @media (width > 1560px) {
     .banner-container {
-        margin: 60px auto 0 auto;
+        margin: 60px auto 20px auto;
     }
 }    
+.leaves-container {
+    background-color: #6af;
+    max-width: 1500px;
+    margin: 0 20px 20px 20px;
+}
+.leaves-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#circle,
+#monster {
+    display: none;
+}
 
+.leaf1 {
+    height: 60px;
+}
+
+.leaf2 {
+    height: 70px;
+}
+
+.leaf3 {
+    height: 65px;
+}
+
+.leaf4 {
+    height: 60px;
+}
+
+.leaf5 {
+    height: 65px;
+}
+
+.leaf1:hover path {
+    fill: #97E44A;
+    transition: none;
+}
+
+.leaf2:hover path {
+    fill: #97E44A;
+    transition: none;
+}
+
+.leaf3:hover path {
+    fill: #97E44A;
+    transition: none;
+}
+
+.leaf4:hover path {
+    fill: #97E44A;
+    transition: none;
+}
+
+.leaf5:hover path {
+    fill: #97E44A;
+    transition: none;
+}
+
+.leaf1 path,
+.leaf2 path,
+.leaf3 path,
+.leaf4 path,
+.leaf5 path {
+    transition: fill 1.2s ease;
+    /* 指定過渡效果作用於 fill 屬性，持續 0.3 秒，使用 ease 時間函數 */
+}
+@media (width > 768px) {
+    #circle,
+    #monster {
+        display: block;
+    }
+}
+@media (width > 768px) {
+    .leaves-container {
+        margin: 0 auto 20px auto;
+    }
+}
