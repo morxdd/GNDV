@@ -499,7 +499,7 @@ nav {
     align-items: center; /* 垂直居中 */
     justify-content: center; /* 水平居中 */
 }
-@media (width > 512px) {
+@media (width > 480px) {
     .newpin-card {
         width: calc(50% - 40px); /* 卡片寬度 */
     }
