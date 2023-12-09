@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .newpin-wrapper {
+            max-width: 100%;
+            overflow: hidden;
+            margin: 0 20px 0 20px;
+        }
+
+        .newpin-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding: 10px 0; /* 添加內部上下間距 */
+            background-color: #36a;
+        }
+
+        .newpin-card {
+            flex: 0 0 auto;
+            width: 250px; /* 卡片寬度 */
+            height: 320px; /* 卡片高度 */
+            margin-right: 16px; /* 卡片間距 */
+            scroll-snap-align: start;
+            background-color: #f0f0f0; /* 卡片背景色 */
+            border-radius: 8px; /* 圓角邊框 */
+            display: flex; /* 啟用flex布局 */
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
+        }
+    </style>
+</head>
+<body>
+    <div class="newpin-wrapper">
+        <div class="newpin-carousel">
+            <div class="newpin-card">卡片 1</div>
+            <div class="newpin-card">卡片 2</div>
+            <div class="newpin-card">卡片 3</div>
+            <div class="newpin-card">卡片 4</div>
+            <div class="newpin-card">卡片 5</div>
+            <div class="newpin-card">卡片 6</div>
+            <div class="newpin-card">卡片 7</div>
+            <div class="newpin-card">卡片 8</div>
+            <div class="newpin-card">卡片 9</div>
+            <div class="newpin-card">卡片 10</div>
+            <div class="newpin-card">卡片 11</div>
+            <div class="newpin-card">卡片 12</div>
+        </div>
+    </div>
+</body>
+</html>

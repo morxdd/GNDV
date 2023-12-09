@@ -210,10 +210,10 @@ nav {
         flex-direction: column;
         background-color: #a6f;
         width: 136px;
-        top: 64px;
+        top: 56px;
         visibility: hidden;
         opacity: 0;
-        transition: top 0.24s, opacity 0.24s linear, visibility 0s linear 0.24s; /* 添加延迟时间 */
+        transition: top 0.2s, opacity 0.2s linear, visibility 0s linear 0.24s; /* 添加延迟时间 */
         z-index: 20;
     }
     .dropdown-content-plant > li a{
@@ -237,10 +237,10 @@ nav {
         flex-direction: column;
         background-color: #6af;
         width: 136px;
-        top: 64px;
+        top: 56px;
         visibility: hidden;
         opacity: 0;
-        transition: top 0.24s, opacity 0.24s linear, visibility 0s linear 0.24s; /* 添加延迟时间 */
+        transition: top 0.2s, opacity 0.2s linear, visibility 0s linear 0.24s; /* 添加延迟时间 */
         z-index: 20;
     }
     .dropdown-content-about  > li a{
@@ -439,6 +439,118 @@ nav {
 }
 @media (width > 768px) {
     .leaves-container {
+        margin: 0 20px 20px 20px;
+    }
+}
+@media (width > 1560px) {
+    .leaves-container {
         margin: 0 auto 20px auto;
     }
 }
+.greyline {
+    max-width: 1500px;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0px auto 20px auto;
+
+}
+.newpin-container {
+    max-width: 1520px;
+    background-color: #a6f;
+    margin: 0 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (width >1560px) {
+    .newpin-container {
+        margin: 0 auto 0 auto;
+    }
+}
+.newpin-title {
+    background-color: #60f;
+}
+.newpin-wrapper {
+    width: 100%;
+    background-color: #F00;
+    position: relative;
+}
+.LRarr {
+    display: none;
+}
+
+.newpin-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    background-color: #36a;
+}
+
+.newpin-card {
+    flex: 0 0  auto;
+    width: calc(100% - 100px); /* 卡片寬度 */
+    aspect-ratio: 5/6;
+    scroll-snap-align: center;
+    background-color: #f0f0f0; /* 卡片背景色 */
+    border-radius: 48px; /* 圓角邊框 */
+    display: flex; /* 啟用flex布局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
+}
+@media (width > 768px) {
+    .newpin-wrapper {
+        width: 100%;
+        background-color: #F00;
+        position: relative;
+    }
+    .newpin-carousel {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        overflow-x: hidden;
+        
+    }
+    .newpin-card {
+        width: calc(25% - 15px);
+
+        scroll-snap-align: start;
+    }
+    .LRarr {
+        background-color: #a52;
+        border-radius: 100px;
+        overflow: hidden;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translate(0, -50%);
+        top: 50%;
+    }
+    #leftarr {
+        position: absolute;
+        left: -8px;
+
+    }
+    #rightarr {
+        position: absolute;
+        right: -8px;
+    }
+    .LRarr img {
+        width: 100%;
+    }
+}
+.newpin-title {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    color: #000;
+}
+
