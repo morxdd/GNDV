@@ -598,6 +598,8 @@ nav {
     flex-direction: column;
     align-items: center; /* 垂直居中 */
     justify-content: space-between; 
+    overflow: hidden;
+    border-radius: 48px 48px 0 0;
 }
 .newpin-textbox {
     display: flex;
@@ -632,10 +634,6 @@ nav {
 .newpin-imgbox img{
     width: 100%;
     display: block;
-}
-
-@media (width > 1500px) {
-
 }
 
 @media (width > 480px) {
@@ -677,7 +675,6 @@ nav {
     }
     .newpin-card {
         width: calc(25% - 15px);
-
         scroll-snap-align: start;
     }
     .LRarr {
@@ -725,5 +722,26 @@ nav {
         margin: 0px 0 .4vw 0;
     }
 }
-
+@media (width > 1560px) {
+    .newpin-card-title {
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 4px;
+        margin: 8px 0 8px 0;
+    }
+    .newpin-card-text {
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        color: #777;
+        margin: 0px 0 16px 0;
+    }
+    .newpin-card-price {
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        color: #3D7E92;
+        margin: 0px 0 8px 0;
+    }
+}
 
