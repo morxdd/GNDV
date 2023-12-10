@@ -4,7 +4,6 @@ body {
 }
 nav {
     display: flex;
-    background-color: #6a3;
     justify-content: space-between;
     align-items: center;
     max-width: 1520px;
@@ -15,6 +14,7 @@ nav {
     top: 0;
     right: 0;
     left: 0;
+    background-color: #fff;
 }
 #hamburger-icon {
     padding: 4px;
@@ -45,9 +45,7 @@ nav {
     top: 0; /* 顶部对齐 */
     right: -100%; /* 初始在屏幕右侧外 */
     height: 100%; /* 全屏高度 */
-    background-color: #fffe;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background-color: #fff;
     transition: right 0.3s; /* 平滑过渡效果 */
     box-sizing: border-box;
     padding: 60px 20px;
@@ -134,17 +132,17 @@ nav {
     border-top: 1px solid transparent;
     box-sizing: border-box;
     padding: 0 40px;
-    font-weight: 300;
 }
 .icons {
     margin-top: 40px;
-    height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 0 20px;
 }
 .iconbox {
-    background-color: #fa0;
     width: 32px;
     height: 32px;
 }
@@ -154,7 +152,6 @@ nav {
 .logobox {
     width: 100px;
     height: 40px;
-    background-color: #fa0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,18 +173,20 @@ nav {
         left: 20px;
     }
     #nav-menu {
-        position: static; /* 不再固定位置 */
+        position: static;
         top: 0px; /* 移除右侧位置设置 */
-        right: 0;
+
         height: 60px;
         width: 100%;
         display: flex; /* 保持为 flex 布局 */
         flex-direction: row; /* 水平排列 */
         align-items: center;
         justify-content: space-between;
-        background-color: #6af; /* 背景颜色 */
+        background-color: #fff;
         box-sizing: border-box;
-        padding: 0 20px 0 20px;
+        padding: 0;
+        overflow: visible;
+        gap: auto;
     }
     #xx {
         display: none;
@@ -196,38 +195,61 @@ nav {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 80%;
+        width: 100%;
         position: relative;
+        margin: 0 14% 0 36px;
+        
     }
     .texts > li {
+        
         display: flex;
         justify-content: space-between;
         align-items: center;
         justify-content: center;
-        border: 1px solid #000;
-        width: calc(20% - 10px);
+        /* width: calc(20% - 10px); */
+        width: auto;
         height: 60px;
+        font-size: 16px;
+        padding: 0 20px;
+        gap: 0px;
+    }
+    .arrowKey {
+        margin: 2px 0 0 2px;
+    }
+
+    .texts > .dropdown {
+        border: 1px solid #0000;
+
     }
     .texts li a{
         display: flex;
         justify-content: space-between;
         align-items: center;
         justify-content: center;
-        border: 1px solid #000;
+        border: 1px solid #0000;
         height: 60px;
+        padding: 0;
     }
 
     .icons {
+        width: 20%;
         display: flex;
         flex-direction: row;
+        margin: auto 0 auto 0;
+        padding: 0;
+        gap: 20px;
+    }
+    .iconbox {
+        width: 24px;
+        height: 24px;
     }
     .logobox {
-        width: 160px;
-        height: 60px;
-        background-color: #faa;
+        width: auto;
+        height: 44px;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 0px;
     }
     .logobox img {
         width: 100%;
@@ -236,10 +258,6 @@ nav {
     }
     #hamburger-icon {
       display: none;
-    }
-    .arrowKey img{
-        transform: rotate(180deg);
-        transition: transform 0.3s ease; 
     }
     .dropdown-content {
         display: none;
@@ -251,22 +269,36 @@ nav {
         position: absolute;
         display: flex;
         flex-direction: column;
-        background-color: #a6f;
         width: 136px;
         top: 56px;
         visibility: hidden;
         opacity: 0;
         transition: top 0.2s, opacity 0.2s linear, visibility 0s linear 0.24s; /* 添加延迟时间 */
-        z-index: 20;
+        z-index: 100;
+        border-radius: 20px;
+        overflow: hidden;
+        padding: 12px 0;
+        background-color: #fff6;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid #ccc6;
+        
+        
     }
     .dropdown-content-plant > li a{
         height: 48px;
+        text-decoration: none;
+        color: #000;
+        
     }
     .dropdown-plant:hover .dropdown-content-plant {
         top: 52px;
         visibility: visible;
         opacity: 1;
         transition-delay: 0s; /* 移除延迟 */
+        background-color: #fff6;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
 
     }
 
@@ -278,22 +310,43 @@ nav {
         position: absolute;
         display: flex;
         flex-direction: column;
-        background-color: #6af;
         width: 136px;
         top: 56px;
         visibility: hidden;
         opacity: 0;
         transition: top 0.2s, opacity 0.2s linear, visibility 0s linear 0.24s; /* 添加延迟时间 */
-        z-index: 20;
+        z-index: 100;
+        border-radius: 20px;
+        overflow: hidden;
+        padding: 12px 0;
+        background-color: #fff6;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);  
+        border: 1px solid #ccc6;  
     }
     .dropdown-content-about  > li a{
         height: 48px;
+        text-decoration: none;
+        color: #000;
     }
     .dropdown-about:hover .dropdown-content-about  {
         top: 52px;
         visibility: visible;
         opacity: 1;
         transition-delay: 0s; /* 移除延迟 */
+    }
+    .texts > li:hover {
+        color: #3D7E92;
+        font-weight: 500;
+    }
+    .texts li:hover > *:not(p) {
+        color: #3D7E92;
+        font-weight: 400;
+    }
+
+    .texts li a:hover {
+        color: #3D7E92;
+        font-weight: 500;
     }
 }
 
@@ -311,7 +364,6 @@ nav {
         right: 0;
         left: 0;
         height: 60px;
-        background-color: #60f;
         z-index: 1;
     }
 }
@@ -321,7 +373,6 @@ nav {
     margin: 60px 20px 20px 20px;
     position: relative;
     max-width: 1520px;
-    background-color: chocolate;
 }
 .banner-imgbox{
     aspect-ratio: 1/1;
@@ -345,7 +396,6 @@ nav {
     top: 50%;
     transform: translate(50%, -50%);
     font-family: 'Noto Sans TC', sans-serif;
-    background-color: #af03;
 }
 .banner-textbox-title {
     font-size: 10vw;
@@ -354,7 +404,6 @@ nav {
     line-height: 1.36;
     font-weight: 600;
     text-shadow: 2px 4px 10px #0005;
-    background-color: #60f7;
 }
 .banner-textbox-text a {
     border-radius: 50px;
@@ -407,7 +456,6 @@ nav {
     }
 }    
 .leaves-container {
-    background-color: #6af;
     max-width: 1500px;
     margin: 0 20px 20px 20px;
 }
@@ -521,7 +569,16 @@ nav {
 .LRarr {
     display: none;
 }
-
+.newpin-title {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    color: #000;
+}
 .newpin-carousel {
     display: flex;
     gap: 20px;
@@ -534,17 +591,76 @@ nav {
 .newpin-card {
     flex: 0 0  auto;
     width: calc(100% - 100px); /* 卡片寬度 */
-    aspect-ratio: 5/6;
+    aspect-ratio: 5/7;
     scroll-snap-align: center;
     background-color: #f0f0f0; /* 卡片背景色 */
-    border-radius: 48px; /* 圓角邊框 */
     display: flex; /* 啟用flex布局 */
+    flex-direction: column;
     align-items: center; /* 垂直居中 */
-    justify-content: center; /* 水平居中 */
+    justify-content: space-between; 
 }
+.newpin-textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.newpin-card-title {
+    font-size: 6vw;
+    font-weight: 600;
+    letter-spacing: 1vw;
+    margin: 1vw 0 2vw 0;
+}
+.newpin-card-text {
+    font-size: 4.8vw;
+    font-weight: 400;
+    letter-spacing: 1vw;
+    color: #777;
+    margin: 0px 0 4vw 0;
+}
+.newpin-card-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 4.8vw;
+    font-weight: 400;
+    color: #3D7E92;
+    margin: 0px 0 1vw 0;
+}
+.newpin-imgbox {
+    overflow: hidden;
+    border-radius: 48px;
+
+}
+.newpin-imgbox img{
+    width: 100%;
+    display: block;
+}
+
+@media (width > 1500px) {
+
+}
+
 @media (width > 480px) {
     .newpin-card {
         width: calc(50% - 40px); /* 卡片寬度 */
+    }
+    .newpin-card-title {
+        font-size: 3vw;
+        font-weight: 600;
+        letter-spacing: .5vw;
+        margin: .5vw 0 1vw 0;
+    }
+    .newpin-card-text {
+        font-size: 2.4vw;
+        font-weight: 400;
+        letter-spacing: .5vw;
+        color: #777;
+        margin: 0px 0 2vw 0;
+    }
+    .newpin-card-price {
+        font-family: 'Inter', sans-serif;
+        font-size: 2.4vw;
+        font-weight: 400;
+        color: #3D7E92;
+        margin: 0px 0 .5vw 0;
     }
 }
 @media (width > 768px) {
@@ -558,7 +674,6 @@ nav {
         display: flex;
         gap: 20px;
         overflow-x: hidden;
-        
     }
     .newpin-card {
         width: calc(25% - 15px);
@@ -589,15 +704,26 @@ nav {
     .LRarr img {
         width: 100%;
     }
+    .newpin-card-title {
+        font-size: 2vw;
+        font-weight: 600;
+        letter-spacing: .4vw;
+        margin: .4vw 0 .6vw 0;
+    }
+    .newpin-card-text {
+        font-size: 1.6vw;
+        font-weight: 400;
+        letter-spacing: .4vw;
+        color: #777;
+        margin: 0px 0 1.333vw 0;
+    }
+    .newpin-card-price {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.6vw;
+        font-weight: 400;
+        color: #3D7E92;
+        margin: 0px 0 .4vw 0;
+    }
 }
-.newpin-title {
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    font-weight: 600;
-    letter-spacing: .1em;
-    color: #000;
-}
+
 
