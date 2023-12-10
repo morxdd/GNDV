@@ -70,31 +70,37 @@ nav {
 }
 
 .texts > li{
-
     font-size: 24px;
-    height: 60px;
+    height: 72px;
     width: 100%;
     display: flex;
     justify-content: start;
     gap: 12px;
     align-items: center;
-    border-bottom: 1px solid #0002;
-    border-top: 1px solid transparent;
+    color: #000;
+}
+.texts > .dropdown {
     box-sizing: border-box;
     padding: 0 20px;
-    
+    border-bottom: 1px solid #0002;
+    border-top: 1px solid transparent;
 }
 .arrowKey {
     width: 20px;
-    transform: rotate(-90deg);
 }
 .arrowKey img{
     width: 100%;
+    transition: transform 0.2s ease; /* 应用于箭头图像的基础样式 */
 }
-
+.rotated {
+    transform: rotate(180deg);
+    transition: transform 0.2s ease; /* 平滑过渡效果 */
+}
 .texts > li > a{
+    box-sizing: border-box;
+    padding: 0 20px;
     width: 100%;
-    height: 60px;
+    height: 72px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -118,17 +124,17 @@ nav {
 .dropdown-content > li a {
     text-decoration: none;
     font-size: 24px;
-    background-color: #fff;
-    color: #777;
-    height: 60px;
+    color: #000a;
+    height: 72px;
     width: 100%;
     display: flex;
     justify-content: start;
     align-items: center;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #0002;
     border-top: 1px solid transparent;
     box-sizing: border-box;
     padding: 0 40px;
+    font-weight: 300;
 }
 .icons {
     margin-top: 40px;
@@ -233,6 +239,7 @@ nav {
     }
     .arrowKey img{
         transform: rotate(180deg);
+        transition: transform 0.3s ease; 
     }
     .dropdown-content {
         display: none;
