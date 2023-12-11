@@ -196,7 +196,7 @@ nav {
         justify-content: space-between;
         width: 100%;
         position: relative;
-        margin: 0 14% 0 36px;
+        margin: 0 16% 0 8%;
         
     }
     .texts > li {
@@ -413,7 +413,7 @@ nav {
     background-color: #fff6;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid #ccc;
+    border: 1px solid #ccc6;
     /* padding: 12px; */
     transition: background-color 0.2s ease;
     width: 7.2em;
@@ -424,7 +424,7 @@ nav {
     letter-spacing: .1em;
 }
 .banner-textbox-text a:hover {
-    background-color: #fff3;
+    background-color: #fff5;
 }
 
 @media (width > 768px) {
@@ -546,7 +546,7 @@ nav {
 }
 .newpin-container {
     max-width: 1520px;
-    background-color: #a6f;
+
     margin: 0 20px 0 20px;
     display: flex;
     flex-direction: column;
@@ -558,11 +558,10 @@ nav {
     }
 }
 .newpin-title {
-    background-color: #60f;
+
 }
 .newpin-wrapper {
     width: 100%;
-    background-color: #F00;
     position: relative;
 }
 .LRarr {
@@ -584,7 +583,7 @@ nav {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    background-color: #36a;
+
 }
 
 .newpin-card {
@@ -592,7 +591,7 @@ nav {
     width: calc(100% - 100px); /* 卡片寬度 */
     aspect-ratio: 5/7;
     scroll-snap-align: center;
-    background-color: #f0f0f0; /* 卡片背景色 */
+
     display: flex; /* 啟用flex布局 */
     flex-direction: column;
     align-items: center; /* 垂直居中 */
@@ -673,7 +672,6 @@ nav {
 @media (width > 768px) {
     .newpin-wrapper {
         width: 100%;
-        background-color: #F00;
         position: relative;
     }
     .newpin-carousel {
@@ -711,21 +709,21 @@ nav {
         width: 100%;
     }
     .newpin-card-title {
-        font-size: 2vw;
+        font-size: 1.72vw;
         font-weight: 600;
-        letter-spacing: .4vw;
-        margin: .4vw 0 .6vw 0;
+        letter-spacing: .3vw;
+        margin: .3vw 0 1vw 0;
     }
     .newpin-card-text {
-        font-size: 1.6vw;
+        font-size: 1.36vw;
         font-weight: 400;
-        letter-spacing: .4vw;
+        letter-spacing: .3vw;
         color: #777;
-        margin: 0px 0 1.333vw 0;
+        margin: 0px 0 2vw 0;
     }
     .newpin-card-price {
         font-family: 'Inter', sans-serif;
-        font-size: 1.6vw;
+        font-size: 1.36vw;
         font-weight: 400;
         color: #3D7E92;
         margin: 0px 0 .4vw 0;
