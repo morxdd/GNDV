@@ -171,6 +171,17 @@ nav {
         right: 20px;
         left: 20px;
     }
+    body::after {
+        content: '';
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 60px;
+        z-index: 1;
+        background-color: #fff;
+    }
     #nav-menu {
         position: static;
         top: 0px; /* 移除右侧位置设置 */
@@ -547,18 +558,15 @@ nav {
 .newpin-container {
     max-width: 1520px;
 
-    margin: 0 20px 0 20px;
+    margin: 0 20px 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 @media (width >1560px) {
     .newpin-container {
-        margin: 0 auto 0 auto;
+        margin: 0 auto 20px auto;
     }
-}
-.newpin-title {
-
 }
 .newpin-wrapper {
     width: 100%;
@@ -751,4 +759,208 @@ nav {
         margin: 0px 0 8px 0;
     }
 }
+/* --------------------------------------------------------------------------- */
+.hotpin-container {
+    max-width: 1520px;
 
+    margin: 0 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (width >1560px) {
+    .hotpin-container {
+        margin: 0 auto 0 auto;
+    }
+}
+.hotpin-wrapper {
+    width: 100%;
+    position: relative;
+}
+.hotpin-LRarr {
+    display: none;
+}
+.hotpin-title {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    color: #000;
+}
+.hotpin-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+}
+
+.hotpin-card {
+    flex: 0 0  auto;
+    width: calc(100% - 100px); /* 卡片寬度 */
+    aspect-ratio: 5/7;
+    scroll-snap-align: center;
+
+    display: flex; /* 啟用flex布局 */
+    flex-direction: column;
+    align-items: center; /* 垂直居中 */
+    justify-content: space-between; 
+    overflow: hidden;
+    border-radius: 48px 48px 0 0;
+}
+.hotpin-card a{
+    text-decoration: none;
+    height: 100%;
+    aspect-ratio: 5/7;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+
+}
+.hotpin-textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hotpin-card-title {
+    font-size: 6vw;
+    font-weight: 600;
+    letter-spacing: 1vw;
+    margin: 1vw 0 2vw 0;
+    color: #000;
+}
+.hotpin-card-text {
+    font-size: 4.8vw;
+    font-weight: 400;
+    letter-spacing: 1vw;
+    color: #777;
+    margin: 0px 0 4vw 0;
+}
+.hotpin-card-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 4.8vw;
+    font-weight: 400;
+    color: #3D7E92;
+    margin: 0px 0 1vw 0;
+}
+.hotpin-imgbox {
+    overflow: hidden;
+    border-radius: 48px;
+
+}
+.hotpin-imgbox img{
+    width: 100%;
+    display: block;
+}
+
+@media (width > 480px) {
+    .hotpin-card {
+        width: calc(50% - 40px); /* 卡片寬度 */
+    }
+    .hotpin-card-title {
+        font-size: 3vw;
+        font-weight: 600;
+        letter-spacing: .5vw;
+        margin: .5vw 0 1vw 0;
+    }
+    .hotpin-card-text {
+        font-size: 2.4vw;
+        font-weight: 400;
+        letter-spacing: .5vw;
+        color: #777;
+        margin: 0px 0 2vw 0;
+    }
+    .hotpin-card-price {
+        font-family: 'Inter', sans-serif;
+        font-size: 2.4vw;
+        font-weight: 400;
+        color: #3D7E92;
+        margin: 0px 0 .5vw 0;
+    }
+}
+@media (width > 768px) {
+    .hotpin-wrapper {
+        width: 100%;
+        position: relative;
+    }
+    .hotpin-carousel {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        overflow-x: hidden;
+    }
+    .hotpin-card {
+        width: calc(25% - 15px);
+        scroll-snap-align: start;
+    }
+    .hotpin-LRarr {
+        background-color: #a52;
+        border-radius: 100px;
+        overflow: hidden;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translate(0, -50%);
+        top: 50%;
+    }
+    #hotpin-leftarr {
+        position: absolute;
+        left: -8px;
+
+    }
+    #hotpin-rightarr {
+        position: absolute;
+        right: -8px;
+    }
+    .hotpin-LRarr img {
+        width: 100%;
+    }
+    .hotpin-card-title {
+        font-size: 1.72vw;
+        font-weight: 600;
+        letter-spacing: .3vw;
+        margin: .3vw 0 1vw 0;
+    }
+    .hotpin-card-text {
+        font-size: 1.36vw;
+        font-weight: 400;
+        letter-spacing: .3vw;
+        color: #777;
+        margin: 0px 0 2vw 0;
+    }
+    .hotpin-card-price {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.36vw;
+        font-weight: 400;
+        color: #3D7E92;
+        margin: 0px 0 .4vw 0;
+    }
+}
+@media (width > 1560px) {
+    .hotpin-card-title {
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 4px;
+        margin: 8px 0 8px 0;
+    }
+    .hotpin-card-text {
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        color: #777;
+        margin: 0px 0 16px 0;
+    }
+    .hotpin-card-price {
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        color: #3D7E92;
+        margin: 0px 0 8px 0;
+    }
+}

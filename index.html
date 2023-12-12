@@ -126,6 +126,7 @@
         </div>
     </div>
     <div class="greyline"></div>
+    <!-- -------------------------------------------------- -->
     <div class="newpin-container">
         <div class="newpin-title">新品上市</div>
         <div class="newpin-wrapper">
@@ -236,6 +237,117 @@
             </button>
         </div>
     </div>
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <div class="hotpin-container">
+        <div class="hotpin-title">新品上市</div>
+        <div class="hotpin-wrapper">
+            <button id="hotpin-leftarr" class="hotpin-LRarr">
+                <img src="https://fakeimg.pl/300x200/200">
+            </button>
+            <div class="hotpin-carousel">
+                <div class="hotpin-card">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/23.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                天堂鳥
+                            </div>
+                            <div class="hotpin-card-text">
+                                熱帶風情
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>                
+                <div class="hotpin-card">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/5.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                卡拉曼西樹
+                            </div>
+                            <div class="hotpin-card-text">
+                                現在出貨滿載水果
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>                
+                <div class="hotpin-card">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/3.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                冬青櫻桃梅
+                            </div>
+                            <div class="hotpin-card-text">
+                                聖誕季限定
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>                
+                <div class="hotpin-card">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/22.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                大開瓶器巴豆
+                            </div>
+                            <div class="hotpin-card-text">
+                                需要明亮的直射陽光
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>                
+                <div class="hotpin-card">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/23.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                天堂鳥
+                            </div>
+                            <div class="hotpin-card-text">
+                                熱帶風情
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>                
+                <div class="hotpin-card">卡片 6</div>
+                <div class="hotpin-card">卡片 7</div>
+                <div class="hotpin-card">卡片 8</div>
+                <div class="hotpin-card">卡片 9</div>
+                <div class="hotpin-card">卡片 10</div>
+                <div class="hotpin-card">卡片 11</div>
+                <div class="hotpin-card">卡片 12</div>
+            </div>
+            <button id="hotpin-rightarr" class="hotpin-LRarr">
+                <img src="https://fakeimg.pl/300x200/200">
+            </button>
+        </div>
+    </div>
 
 
 <script>
@@ -302,7 +414,7 @@
 
 </script>
 <script>
-    //按按鈕，輪播卡片
+    //按按鈕，輪播卡片，新品上市
     document.addEventListener('DOMContentLoaded', () => {
         const carousel = document.querySelector('.newpin-carousel');
         const cards = document.querySelectorAll('.newpin-card');
@@ -314,6 +426,22 @@
 
         document.getElementById('rightarr').addEventListener('click', () => {
             carousel.scrollLeft += cardWidth;
+        });
+    });
+</script>
+<script>
+    //按按鈕，輪播卡片，熱門商品
+    document.addEventListener('DOMContentLoaded', () => {
+        const hotpinCarousel = document.querySelector('.hotpin-carousel');
+        const hotpinCards = document.querySelectorAll('.hotpin-card');
+        const hotpinCardWidth = hotpinCards[0].offsetWidth + 20; // 20是卡片之間的間隙
+
+        document.getElementById('hotpin-leftarr').addEventListener('click', () => {
+            hotpinCarousel.scrollLeft -= hotpinCardWidth;
+        });
+
+        document.getElementById('hotpin-rightarr').addEventListener('click', () => {
+            hotpinCarousel.scrollLeft += hotpinCardWidth;
         });
     });
 </script>
