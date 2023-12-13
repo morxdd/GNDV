@@ -7,7 +7,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     max-width: 1520px;
-    z-index: 2;
+    z-index: 100;
     align-items: center;
     height: 60px;
     position: fixed;
@@ -47,7 +47,7 @@ nav {
     background-color: #fff;
     transition: right 0.3s; /* 平滑过渡效果 */
     box-sizing: border-box;
-    padding: 60px 20px;
+    padding: 60px 24px;
     z-index: 40;
     width: 100%;
     height: 100vh;
@@ -151,7 +151,7 @@ nav {
 }
 .logobox {
     width: 100px;
-    height: 40px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -389,7 +389,7 @@ nav {
 .banner-imgbox{
     aspect-ratio: 1/1;
     overflow: hidden;
-    border-radius: 36px;
+    border-radius: 48px;
     
 }
 .banner-imgbox img{
@@ -1115,4 +1115,159 @@ nav {
         margin: 0px 0 8px 0;
     }
 }
+/* _________來去逛逛_________ */
+.shopping-container {
+    margin: 0 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.shopping-bar {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: linear-gradient(to bottom, #1F9981, #006652);
+    position: relative;
+    box-sizing: border-box;
+    padding: 32px 32px 32px 32px;
+    border-radius: 48px 48px 28px 28px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% + 4px);
+}
+.shopping-bar a {
+    text-decoration: none;
+}
+.shopping-bar-arr {
+    position: absolute;
+    right: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+}
+.shopping-bar-arr img{
+    width: 100%;
+}
+.shopping-bar-title {
+    color: #fff;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin: 0 0 20px 0;
+    
+}
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    display: none;
+}
+.shopping-bar-text {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.shopping-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.shopping-card {
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+}
+.shopping-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.shopping-card a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #fff;
+}
+.shopping-card-arr {
+    display: none;
+}
+.shopping-card p{
+    position: absolute;
+    bottom: 24px;
+    left: 32px;
+    text-shadow: 2px 4px 8px #000;
+    z-index: 20;
+}
+.shopping-gradient {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    bottom: 0;
+    background: linear-gradient(to bottom, #0000, #000a);
 
+}
+/* --------------- */
+.caretips-container {
+    margin: 0 20px 20px 20px;
+    background-color: #ccc;
+}
+.caretips-bar a{
+    background: linear-gradient(to bottom, #B87D49, #724620);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 32px;
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 48px;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+}
+.caretips-textbox {
+    margin: 20px 0 0 0;
+    position: relative;
+}
+.caretips-title {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin: 0 0 20px 0;
+    
+    display: block;
+}
+.caretips-text {
+    font-size: 20px;
+    line-height: 1.5;
+}
+.caretips-arr {
+    position: absolute;
+    width: 40px;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.caretips-arr img {
+    width: 100%;
+}
+.caretips-imagebox {
+    background-color: #3D7E92;
+    aspect-ratio: 3/2;
+    border-radius: 28px;
+    overflow: hidden;
+    width: calc(100% + 24px);
+    align-self: center;
+    margin-bottom: -12px;
+}
+.caretips-imagebox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 60% center;
+}
