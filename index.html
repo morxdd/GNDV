@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首頁 | 綠域植栽</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap"
@@ -126,50 +128,269 @@
         </div>
     </div>
     <div class="greyline"></div>
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <div class="hotpin-container">
+        <div class="hotpin-title">熱門商品</div>
+        <div class="hotpin-wrapper">
+            <button id="hotpin-leftarr" class="hotpin-LRarr">
+                <img src="images/icons/leftk.png">
+            </button>
+            <div class="hotpin-carousel">
+                <div class="hotpin-card  hotpin-card-first">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/23.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                天堂鳥
+                            </div>
+                            <div class="hotpin-card-text">
+                                熱帶風情
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>                
+                <div class="hotpin-card">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/31.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                龜背竹
+                            </div>
+                            <div class="hotpin-card-text">
+                                奇特的天然葉孔
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>                
+                <div class="hotpin-card">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/18.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                鹿角蕨
+                            </div>
+                            <div class="hotpin-card-text">
+                                像鹿角的奇特葉子
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>                
+                <div class="hotpin-card">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/17.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                鳥巢蕨
+                            </div>
+                            <div class="hotpin-card-text">
+                                適合作為室內植物
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>                
+                <div class="hotpin-card">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/15.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                風車棕櫚
+                            </div>
+                            <div class="hotpin-card-text">
+                                輕鬆帶來叢林的氛圍
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="hotpin-card">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/27.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                銀線虎尾蘭
+                            </div>
+                            <div class="hotpin-card-text">
+                                淺銀綠色的葉片
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="hotpin-card">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/12.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                客廳棕櫚
+                            </div>
+                            <div class="hotpin-card-text">
+                                易於護理的熱門植物
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="hotpin-card">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/28.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                橄欖樹
+                            </div>
+                            <div class="hotpin-card-text">
+                                最受歡迎的室內植物
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="hotpin-card">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/29.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                諾福克島松
+                            </div>
+                            <div class="hotpin-card-text">
+                                聖誕季限定
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="hotpin-card">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/16.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                蛇草勞倫蒂
+                            </div>
+                            <div class="hotpin-card-text">
+                                可以忍受弱光和乾旱
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="hotpin-card">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/1.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                ZZ植物
+                            </div>
+                            <div class="hotpin-card-text">
+                                耐旱的室內植物
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="hotpin-card  hotpin-card-last">
+                    <a href="#">                    
+                        <div class="hotpin-imgbox">
+                            <img src="images/plants/4.jpg" alt="">
+                        </div>
+                        <div class="hotpin-textbox">
+                            <div class="hotpin-card-title">
+                                卡拉西亞響尾蛇
+                            </div>
+                            <div class="hotpin-card-text">
+                                晝夜升降葉片運動
+                            </div>
+                            <div class="hotpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+            <button id="hotpin-rightarr" class="hotpin-LRarr">
+                <img src="images/icons/righhk.png">
+            </button>
+        </div>
+        <div class="pin-buttom">
+                <a href="goods.html">
+                    <p>查看熱門商品</p>
+                </a>
+        </div>
+    </div>
+    <div class="greyline"></div>
     <!-- -------------------------------------------------- -->
     <div class="newpin-container">
         <div class="newpin-title">新品上市</div>
         <div class="newpin-wrapper">
             <button id="leftarr" class="LRarr">
-                <img src="https://fakeimg.pl/300x200/200">
+                <img src="images/icons/leftk.png">
             </button>
             <div class="newpin-carousel">
-                <div class="newpin-card">
+                <div class="newpin-card newpin-card-first">
                     <a href="#">                    
                         <div class="newpin-imgbox">
-                            <img src="images/plants/23.jpg" alt="">
+                            <img src="images/plants/25.jpg" alt="">
                         </div>
                         <div class="newpin-textbox">
                             <div class="newpin-card-title">
-                                天堂鳥
+                                翠綠終章
                             </div>
                             <div class="newpin-card-text">
-                                熱帶風情
+                                優雅豐富的葉片
                             </div>
                             <div class="newpin-card-price">
                                 NT$1,230 - NT$2,160
                             </div>
                         </div>
                     </a>
-                </div>                
-                <div class="newpin-card">
-                    <a href="#">                    
-                        <div class="newpin-imgbox">
-                            <img src="images/plants/5.jpg" alt="">
-                        </div>
-                        <div class="newpin-textbox">
-                            <div class="newpin-card-title">
-                                卡拉曼西樹
-                            </div>
-                            <div class="newpin-card-text">
-                                現在出貨滿載水果
-                            </div>
-                            <div class="newpin-card-price">
-                                NT$1,230 - NT$2,160
-                            </div>
-                        </div>
-                    </a>
-                </div>                
+                </div>
                 <div class="newpin-card">
                     <a href="#">                    
                         <div class="newpin-imgbox">
@@ -187,7 +408,25 @@
                             </div>
                         </div>
                     </a>
-                </div>                
+                </div>              
+                <div class="newpin-card">
+                    <a href="#">                    
+                        <div class="newpin-imgbox">
+                            <img src="images/plants/5.jpg" alt="">
+                        </div>
+                        <div class="newpin-textbox">
+                            <div class="newpin-card-title">
+                                卡拉曼西樹
+                            </div>
+                            <div class="newpin-card-text">
+                                現在出貨滿載水果
+                            </div>
+                            <div class="newpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>                            
                 <div class="newpin-card">
                     <a href="#">                    
                         <div class="newpin-imgbox">
@@ -209,14 +448,14 @@
                 <div class="newpin-card">
                     <a href="#">                    
                         <div class="newpin-imgbox">
-                            <img src="images/plants/23.jpg" alt="">
+                            <img src="images/plants/6.jpg" alt="">
                         </div>
                         <div class="newpin-textbox">
                             <div class="newpin-card-title">
-                                天堂鳥
+                                史特羅曼三重奏
                             </div>
                             <div class="newpin-card-text">
-                                熱帶風情
+                                喜歡高濕度
                             </div>
                             <div class="newpin-card-price">
                                 NT$1,230 - NT$2,160
@@ -224,132 +463,144 @@
                         </div>
                     </a>
                 </div>                
-                <div class="newpin-card">卡片 6</div>
-                <div class="newpin-card">卡片 7</div>
-                <div class="newpin-card">卡片 8</div>
-                <div class="newpin-card">卡片 9</div>
-                <div class="newpin-card">卡片 10</div>
-                <div class="newpin-card">卡片 11</div>
-                <div class="newpin-card">卡片 12</div>
+                <div class="newpin-card">
+                    <a href="#">                    
+                        <div class="newpin-imgbox">
+                            <img src="images/plants/24.jpg" alt="">
+                        </div>
+                        <div class="newpin-textbox">
+                            <div class="newpin-card-title">
+                                翠紋竹芋
+                            </div>
+                            <div class="newpin-card-text">
+                                晝夜升降葉片運動
+                            </div>
+                            <div class="newpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div> 
+                <div class="newpin-card">
+                    <a href="#">                    
+                        <div class="newpin-imgbox">
+                            <img src="images/plants/9.jpg" alt="">
+                        </div>
+                        <div class="newpin-textbox">
+                            <div class="newpin-card-title">
+                                和平百合
+                            </div>
+                            <div class="newpin-card-text">
+                                家庭和辦公室的珍貴選擇
+                            </div>
+                            <div class="newpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div> 
+                <div class="newpin-card">
+                    <a href="#">                    
+                        <div class="newpin-imgbox">
+                            <img src="images/plants/28.jpg" alt="">
+                        </div>
+                        <div class="newpin-textbox">
+                            <div class="newpin-card-title">
+                                橄欖樹
+                            </div>
+                            <div class="newpin-card-text">
+                                最受歡迎的室內植物
+                            </div>
+                            <div class="newpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="newpin-card">
+                    <a href="#">                    
+                        <div class="newpin-imgbox">
+                            <img src="images/plants/8.jpg" alt="">
+                        </div>
+                        <div class="newpin-textbox">
+                            <div class="newpin-card-title">
+                                竹芋波星
+                            </div>
+                            <div class="newpin-card-text">
+                                毛茸茸的栗色底面
+                            </div>
+                            <div class="newpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div> 
+                <div class="newpin-card">
+                    <a href="#">                    
+                        <div class="newpin-imgbox">
+                            <img src="images/plants/26.jpg" alt="">
+                        </div>
+                        <div class="newpin-textbox">
+                            <div class="newpin-card-title">
+                                銀星球蘭
+                            </div>
+                            <div class="newpin-card-text">
+                                易於照料的熱帶藤本植物
+                            </div>
+                            <div class="newpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div> 
+                <div class="newpin-card">
+                    <a href="#">                    
+                        <div class="newpin-imgbox">
+                            <img src="images/plants/14.jpg" alt="">
+                        </div>
+                        <div class="newpin-textbox">
+                            <div class="newpin-card-title">
+                                胡椒雨滴
+                            </div>
+                            <div class="newpin-card-text">
+                                適合寵物的室內植物
+                            </div>
+                            <div class="newpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div> 
+                <div class="newpin-card newpin-card-last">
+                    <a href="#">                    
+                        <div class="newpin-imgbox">
+                            <img src="images/plants/19.jpg" alt="">
+                        </div>
+                        <div class="newpin-textbox">
+                            <div class="newpin-card-title">
+                                喜林芋綠
+                            </div>
+                            <div class="newpin-card-text">
+                                稀有、低維護的熱帶植物
+                            </div>
+                            <div class="newpin-card-price">
+                                NT$1,230 - NT$2,160
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
             <button id="rightarr" class="LRarr">
-                <img src="https://fakeimg.pl/300x200/200">
+                <img src="images/icons/righhk.png">
             </button>
         </div>
-    </div>
-    <!-- -------------------------------------------------------------------------------------------- -->
-    <div class="hotpin-container">
-        <div class="hotpin-title">新品上市</div>
-        <div class="hotpin-wrapper">
-            <button id="hotpin-leftarr" class="hotpin-LRarr">
-                <img src="https://fakeimg.pl/300x200/200">
-            </button>
-            <div class="hotpin-carousel">
-                <div class="hotpin-card">
-                    <a href="#">                    
-                        <div class="hotpin-imgbox">
-                            <img src="images/plants/23.jpg" alt="">
-                        </div>
-                        <div class="hotpin-textbox">
-                            <div class="hotpin-card-title">
-                                天堂鳥
-                            </div>
-                            <div class="hotpin-card-text">
-                                熱帶風情
-                            </div>
-                            <div class="hotpin-card-price">
-                                NT$1,230 - NT$2,160
-                            </div>
-                        </div>
-                    </a>
-                </div>                
-                <div class="hotpin-card">
-                    <a href="#">                    
-                        <div class="hotpin-imgbox">
-                            <img src="images/plants/5.jpg" alt="">
-                        </div>
-                        <div class="hotpin-textbox">
-                            <div class="hotpin-card-title">
-                                卡拉曼西樹
-                            </div>
-                            <div class="hotpin-card-text">
-                                現在出貨滿載水果
-                            </div>
-                            <div class="hotpin-card-price">
-                                NT$1,230 - NT$2,160
-                            </div>
-                        </div>
-                    </a>
-                </div>                
-                <div class="hotpin-card">
-                    <a href="#">                    
-                        <div class="hotpin-imgbox">
-                            <img src="images/plants/3.jpg" alt="">
-                        </div>
-                        <div class="hotpin-textbox">
-                            <div class="hotpin-card-title">
-                                冬青櫻桃梅
-                            </div>
-                            <div class="hotpin-card-text">
-                                聖誕季限定
-                            </div>
-                            <div class="hotpin-card-price">
-                                NT$1,230 - NT$2,160
-                            </div>
-                        </div>
-                    </a>
-                </div>                
-                <div class="hotpin-card">
-                    <a href="#">                    
-                        <div class="hotpin-imgbox">
-                            <img src="images/plants/22.jpg" alt="">
-                        </div>
-                        <div class="hotpin-textbox">
-                            <div class="hotpin-card-title">
-                                大開瓶器巴豆
-                            </div>
-                            <div class="hotpin-card-text">
-                                需要明亮的直射陽光
-                            </div>
-                            <div class="hotpin-card-price">
-                                NT$1,230 - NT$2,160
-                            </div>
-                        </div>
-                    </a>
-                </div>                
-                <div class="hotpin-card">
-                    <a href="#">                    
-                        <div class="hotpin-imgbox">
-                            <img src="images/plants/23.jpg" alt="">
-                        </div>
-                        <div class="hotpin-textbox">
-                            <div class="hotpin-card-title">
-                                天堂鳥
-                            </div>
-                            <div class="hotpin-card-text">
-                                熱帶風情
-                            </div>
-                            <div class="hotpin-card-price">
-                                NT$1,230 - NT$2,160
-                            </div>
-                        </div>
-                    </a>
-                </div>                
-                <div class="hotpin-card">卡片 6</div>
-                <div class="hotpin-card">卡片 7</div>
-                <div class="hotpin-card">卡片 8</div>
-                <div class="hotpin-card">卡片 9</div>
-                <div class="hotpin-card">卡片 10</div>
-                <div class="hotpin-card">卡片 11</div>
-                <div class="hotpin-card">卡片 12</div>
-            </div>
-            <button id="hotpin-rightarr" class="hotpin-LRarr">
-                <img src="https://fakeimg.pl/300x200/200">
-            </button>
+        <div class="pin-buttom">
+            <a href="goods.html">
+                <p>查看全部新品</p>
+            </a>
         </div>
     </div>
-
-
+    <div class="greyline"></div>
 <script>
     //點擊漢堡icon，選單打開/關閉的事件處理器
     document.getElementById('hamburger-icon').addEventListener('click', function() {
@@ -415,36 +666,45 @@
 </script>
 <script>
     //按按鈕，輪播卡片，新品上市
-    document.addEventListener('DOMContentLoaded', () => {
-        const carousel = document.querySelector('.newpin-carousel');
-        const cards = document.querySelectorAll('.newpin-card');
-        const cardWidth = cards[0].offsetWidth + 20; // 20是卡片之間的間隙
+    function setupCarousel() {
+    const carousel = document.querySelector('.newpin-carousel');
+    const cards = document.querySelectorAll('.newpin-card');
+    if(cards.length === 0) return; // 確保有卡片存在
+    const cardWidth = cards[0].offsetWidth + 20; // 20是卡片之間的間隙
 
-        document.getElementById('leftarr').addEventListener('click', () => {
-            carousel.scrollLeft -= cardWidth;
-        });
-
-        document.getElementById('rightarr').addEventListener('click', () => {
-            carousel.scrollLeft += cardWidth;
-        });
+    document.getElementById('leftarr').addEventListener('click', () => {
+        carousel.scrollLeft -= cardWidth;
     });
+    
+    document.getElementById('rightarr').addEventListener('click', () => {
+        console.log(carousel, carousel.scrollLeft, cardWidth)
+        carousel.scrollLeft += cardWidth;
+    });
+}
+// 當文檔加載完成時
+document.addEventListener('DOMContentLoaded', setupCarousel);
+
+
 </script>
 <script>
-    //按按鈕，輪播卡片，熱門商品
-    document.addEventListener('DOMContentLoaded', () => {
-        const hotpinCarousel = document.querySelector('.hotpin-carousel');
-        const hotpinCards = document.querySelectorAll('.hotpin-card');
-        const hotpinCardWidth = hotpinCards[0].offsetWidth + 20; // 20是卡片之間的間隙
+   //按按鈕，輪播卡片，熱門商品
+   function setupCarousel() {
+    const hotpinCarousel = document.querySelector('.hotpin-carousel');
+    const hotpinCards = document.querySelectorAll('.hotpin-card');
+    if(hotpinCards.length === 0) return; // 確保有卡片存在
+    const hotpinCardWidth = hotpinCards[0].offsetWidth + 20; // 20是卡片之間的間隙
 
-        document.getElementById('hotpin-leftarr').addEventListener('click', () => {
-            hotpinCarousel.scrollLeft -= hotpinCardWidth;
-        });
-
-        document.getElementById('hotpin-rightarr').addEventListener('click', () => {
-            hotpinCarousel.scrollLeft += hotpinCardWidth;
-        });
+    document.getElementById('hotpin-leftarr').addEventListener('click', () => {
+        hotpinCarousel.scrollLeft -= hotpinCardWidth;
     });
+    
+    document.getElementById('hotpin-rightarr').addEventListener('click', () => {
+        console.log(hotpinCarousel, hotpinCarousel.scrollLeft, hotpinCardWidth)
+        hotpinCarousel.scrollLeft += hotpinCardWidth;
+    });
+}
+// 當文檔加載完成時
+document.addEventListener('DOMContentLoaded', setupCarousel);
 </script>
-
 </body>
 </html>

@@ -42,15 +42,15 @@ nav {
     display: flex;
     flex-direction: column; /* 垂直排列菜单项 */
     position: fixed; /* 固定位置 */
-    top: 0; /* 顶部对齐 */
+    top: 0px; /* 顶部对齐 */
     right: -100%; /* 初始在屏幕右侧外 */
-    height: 100%; /* 全屏高度 */
     background-color: #fff;
     transition: right 0.3s; /* 平滑过渡效果 */
     box-sizing: border-box;
     padding: 60px 20px;
     z-index: 40;
     width: 100%;
+    height: 100vh;
     overflow: auto; 
     -ms-overflow-style: none;  /* IE和Edge */
     scrollbar-width: none;  /* Firefox */
@@ -292,6 +292,7 @@ nav {
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border: 1px solid #ccc6;
+        box-shadow: 0 4px 10px #0002;
         
         
     }
@@ -332,7 +333,8 @@ nav {
         background-color: #fff6;
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);  
-        border: 1px solid #ccc6;  
+        border: 1px solid #ccc6; 
+        box-shadow: 0 4px 10px #0002;
     }
     .dropdown-content-about  > li a{
         height: 48px;
@@ -557,11 +559,16 @@ nav {
 }
 .newpin-container {
     max-width: 1520px;
-
-    margin: 0 20px 20px 20px;
+    margin: 0 0 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.newpin-carousel::-webkit-scrollbar {
+    display: none;
+}
+.hotpin-carousel::-webkit-scrollbar {
+    display: none;
 }
 @media (width >1560px) {
     .newpin-container {
@@ -591,15 +598,15 @@ nav {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-
+    background-color: #fff;
+    scroll-margin-right: 20px;
+    
 }
-
 .newpin-card {
     flex: 0 0  auto;
     width: calc(100% - 100px); /* 卡片寬度 */
     aspect-ratio: 5/7;
     scroll-snap-align: center;
-
     display: flex; /* 啟用flex布局 */
     flex-direction: column;
     align-items: center; /* 垂直居中 */
@@ -607,6 +614,14 @@ nav {
     overflow: hidden;
     border-radius: 48px 48px 0 0;
 }
+.newpin-card-first{
+    margin-left: 80px;
+}
+.newpin-card-last{
+    margin-right: 80xp;
+    padding-right: 48px;;
+}
+
 .newpin-card a{
     text-decoration: none;
     height: 100%;
@@ -651,10 +666,72 @@ nav {
     width: 100%;
     display: block;
 }
+.pin-buttom {
+    width: calc(100% - 40px);
+    margin: 2em 0 0 0 ;
+    display: flex;
+    height: 3em;
+    background-color: #eee;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.8vw;
+    border-radius: 200px;
+}
+.pin-buttom a {
+    text-decoration: none;
+    color: #655D5D;
+}
+.pin-buttom a:hover {
+    text-decoration: none;
+    position: relative;
+}
+
+.pin-buttom a:hover::after {
+    text-decoration: none;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    border-bottom: 2px solid;
+    width: 100%;
+    background-color: #655D5D;;
+}
+@media (width > 480px) {
+    .pin-buttom {
+        font-size: 2.4vw;
+    }
+}
+@media (width > 768px) {
+    .pin-buttom {
+        font-size: 1.36vw;
+        width: 100%;
+    }
+}
+@media (width > 1560px) {
+    .pin-buttom {
+        font-size: 24px;
+    }
+}
+
+
+
+
+
+
 
 @media (width > 480px) {
+    .newpin-carousel::-webkit-scrollbar {
+        display: none;
+    }
     .newpin-card {
         width: calc(50% - 40px); /* 卡片寬度 */
+    }
+    .newpin-card-first{
+        margin-left: 29.5%;
+    }
+    .newpin-card-last{
+        padding-right: 28%;
     }
     .newpin-card-title {
         font-size: 3vw;
@@ -678,6 +755,9 @@ nav {
     }
 }
 @media (width > 768px) {
+    .newpin-container {
+        margin: 0 20px 20px 20px;
+    }
     .newpin-wrapper {
         width: 100%;
         position: relative;
@@ -686,14 +766,25 @@ nav {
         width: 100%;
         display: flex;
         gap: 20px;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
+    
     .newpin-card {
         width: calc(25% - 15px);
         scroll-snap-align: start;
     }
+    .newpin-card-first{
+        margin-left: 0px;
+    }
+    .newpin-card-last{
+        padding-right: 0px;
+    }
+    
     .LRarr {
-        background-color: #a52;
+        background-color: #fff6;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid #ccc6;
         border-radius: 100px;
         overflow: hidden;
         width: 60px;
@@ -703,19 +794,32 @@ nav {
         justify-content: center;
         transform: translate(0, -50%);
         top: 50%;
+        cursor: pointer;
+        box-shadow: 0 4px 10px #0002;
+    }
+    .LRarr:hover {
+        background-color: #fff4;
+    }
+    #leftarr {
+        justify-content: start;
+    }
+    .LRarr img {
+        width: 92%;
+        opacity: 0.8;
+        
     }
     #leftarr {
         position: absolute;
         left: -8px;
+        justify-content: start;
 
     }
     #rightarr {
         position: absolute;
         right: -8px;
+        justify-content: end;
     }
-    .LRarr img {
-        width: 100%;
-    }
+    
     .newpin-card-title {
         font-size: 1.72vw;
         font-weight: 600;
@@ -738,6 +842,9 @@ nav {
     }
 }
 @media (width > 1560px) {
+    .newpin-container {
+        margin: 0 auto 20px auto;
+    }
     .newpin-card-title {
         font-size: 32px;
         font-weight: 600;
@@ -763,14 +870,14 @@ nav {
 .hotpin-container {
     max-width: 1520px;
 
-    margin: 0 20px 0 20px;
+    margin: 0 0 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 @media (width >1560px) {
     .hotpin-container {
-        margin: 0 auto 0 auto;
+        margin: 0 auto 20 auto;
     }
 }
 .hotpin-wrapper {
@@ -796,15 +903,15 @@ nav {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-
+    background-color: #fff;
+    scroll-margin-right: 20px;
+    
 }
-
 .hotpin-card {
     flex: 0 0  auto;
     width: calc(100% - 100px); /* 卡片寬度 */
     aspect-ratio: 5/7;
     scroll-snap-align: center;
-
     display: flex; /* 啟用flex布局 */
     flex-direction: column;
     align-items: center; /* 垂直居中 */
@@ -812,6 +919,14 @@ nav {
     overflow: hidden;
     border-radius: 48px 48px 0 0;
 }
+.hotpin-card-first{
+    margin-left: 80px;
+}
+.hotpin-card-last{
+    margin-right: 80xp;
+    padding-right: 48px;;
+}
+
 .hotpin-card a{
     text-decoration: none;
     height: 100%;
@@ -858,6 +973,15 @@ nav {
 }
 
 @media (width > 480px) {
+    .hotpin-carousel::-webkit-scrollbar {
+        display: none;
+    }
+    .hotpin-card-first{
+        margin-left: 29.5%;
+    }
+    .hotpin-card-last{
+        padding-right: 28%;
+    }
     .hotpin-card {
         width: calc(50% - 40px); /* 卡片寬度 */
     }
@@ -883,6 +1007,15 @@ nav {
     }
 }
 @media (width > 768px) {
+    .hotpin-container {
+        margin: 0 20px 20px 20px;
+    }
+    .hotpin-card-first{
+        margin-left: 0px;
+    }
+    .hotpin-card-last{
+        padding-right: 0px;
+    }
     .hotpin-wrapper {
         width: 100%;
         position: relative;
@@ -891,14 +1024,20 @@ nav {
         width: 100%;
         display: flex;
         gap: 20px;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
     .hotpin-card {
         width: calc(25% - 15px);
         scroll-snap-align: start;
     }
+    .hotpin-card-last{
+        padding-right: 0;
+    }
     .hotpin-LRarr {
-        background-color: #a52;
+        background-color: #fff6;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid #ccc6;
         border-radius: 100px;
         overflow: hidden;
         width: 60px;
@@ -908,19 +1047,28 @@ nav {
         justify-content: center;
         transform: translate(0, -50%);
         top: 50%;
+        cursor: pointer;
+        box-shadow: 0 4px 10px #0002;
+    }
+    .hotpin-LRarr:hover {
+        background-color: #fff4;
+    }
+    .hotpin-LRarr img {
+        width: 92%;
+        opacity: 0.8;
     }
     #hotpin-leftarr {
         position: absolute;
         left: -8px;
+        justify-content: start;
 
     }
     #hotpin-rightarr {
         position: absolute;
         right: -8px;
+        justify-content: end;
     }
-    .hotpin-LRarr img {
-        width: 100%;
-    }
+    
     .hotpin-card-title {
         font-size: 1.72vw;
         font-weight: 600;
@@ -943,6 +1091,9 @@ nav {
     }
 }
 @media (width > 1560px) {
+    .hotpin-container {
+        margin: 0 auto 20px auto;
+    }
     .hotpin-card-title {
         font-size: 32px;
         font-weight: 600;
@@ -964,3 +1115,4 @@ nav {
         margin: 0px 0 8px 0;
     }
 }
+
