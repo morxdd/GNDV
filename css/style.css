@@ -1588,9 +1588,7 @@ nav {
 }
 
 .server-card-last .server-imagebox {
-    aspect-ratio: 1/1;
-    padding: 0;
-
+    aspect-ratio: 3/3.438;
 }
 
 .server-imagebox {
@@ -1606,12 +1604,23 @@ nav {
     display: block;
 }
 /* ------------- */
+.server-go {
+    margin: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .server-go a{
-    background-color: #97E44A;;
+    background-color: #97E44A;
+    border: 1px solid transparent;
     vertical-align:auto;
     font-size: 24px;
     text-decoration: none;
     color: #000;
-    margin: 200px 0;
-    height: 20px;
+    padding: 0 40px;
+    height: 72px;
+    
+    line-height: 72px;
+    border-radius: 200px;
+
 }
