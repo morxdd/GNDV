@@ -387,7 +387,7 @@ nav {
     max-width: 1520px;
 }
 .banner-imgbox{
-    aspect-ratio: 1/1;
+    aspect-ratio: 4/5;
     overflow: hidden;
     border-radius: 48px;
     
@@ -426,7 +426,7 @@ nav {
     background-color: #fff6;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid #ccc6;
+    border: 1px solid #cccc;
     /* padding: 12px; */
     transition: background-color 0.2s ease;
     width: 7.2em;
@@ -435,6 +435,7 @@ nav {
     text-align: center;
     display: block;
     letter-spacing: .1em;
+    box-shadow: 0 4px 10px #0005;
 }
 .banner-textbox-text a:hover {
     background-color: #fff5;
@@ -1398,7 +1399,7 @@ nav {
     max-width: 1520px;
 }
 .ecomission-bar a{
-    background: linear-gradient(to bottom, #0071A9, #00557F);
+    background: linear-gradient(to bottom, #3366AA, #143766);
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -1463,7 +1464,7 @@ nav {
         gap: 20px;
     }
     .ecomission-pc-imagebox-wrapper {
-        background: linear-gradient(to bottom, #0071A9, #00557F);
+        background: linear-gradient(to bottom, #3366AA, #143766);
         width: calc(75% - 10px);
         display: flex;
         box-sizing: border-box;
@@ -1482,7 +1483,7 @@ nav {
         box-sizing: border-box;
     }
     .ecomission-bar a{
-        background: linear-gradient(to bottom, #0071A9, #00557F);
+        background: linear-gradient(to bottom, #3366AA, #143766);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1535,31 +1536,57 @@ nav {
     margin: 0px 0 20px 0;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid red;
-
 }
 .server-scroll {
     display: flex;
     flex-direction: row;
     width: 100%;
-    background-color: #B87D49;
+
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     gap: 20px;
+    padding-right: 80px;
+}
+.server-scroll::-webkit-scrollbar {
+    display: none;
 }
 .server-card {
     flex: 0 0 auto;
-    width: calc(100% - 100px);
-    aspect-ratio: 3/4;
-    background-color: #fa0;
+    width: calc(100% - 20px);
+    aspect-ratio: 1/2;
     scroll-snap-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
+.servar-title {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    color: #000;
+}
+.server-text {
+    padding-top: 40px;
+    line-height: 1.5;
+}
+
 .server-card-first {
     margin-left: 80px;
 }
-.server-card-last {
-    margin-right: 80px;
+.server-imagebox {
+    width: 100%;
+    aspect-ratio: 3/4;
+    border-radius: 48px;
+    overflow: hidden;
+}
+.server-imagebox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
