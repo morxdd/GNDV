@@ -1785,13 +1785,13 @@ nav {
 }
 .comment-card-stars {
     display: flex;
-    justify-content: start;
     margin-top: 8px;
     height: 1.2em;
     gap: 4px;
+    align-items: stretch;
 }
 .comment-card-stars img{
-    height: 100%;
+    width: 17%;
 }
 .comment-card-name {
     font-weight: 500;
