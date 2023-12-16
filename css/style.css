@@ -107,7 +107,10 @@ nav {
     text-decoration: none;
     color: #000;
     box-sizing: border-box;
+    font-weight: 500;/*不遺傳*/
+    letter-spacing: 2px;/*不遺傳*/
 }
+
 .dropdown-content-plant {
     display: none;
 }
@@ -125,6 +128,7 @@ nav {
     color: #000a;
     height: 72px;
     width: 100%;
+    letter-spacing: 2px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -132,7 +136,13 @@ nav {
     border-top: 1px solid transparent;
     box-sizing: border-box;
     padding: 0 40px;
+    font-weight: 500;
 }
+.dropdown > p {
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
 .icons {
     margin-top: 40px;
     display: flex;
@@ -214,6 +224,7 @@ nav {
         position: relative;
         margin: 0 16% 0 8%;
         
+        
     }
     .texts > li {
         
@@ -227,6 +238,7 @@ nav {
         font-size: 16px;
         padding: 0 20px;
         gap: 0px;
+        
     }
     .arrowKey {
         margin: 2px 0 0 2px;
@@ -244,6 +256,12 @@ nav {
         border: 1px solid #0000;
         height: 60px;
         padding: 0;
+        font-weight: 400;/*不遺傳*/
+        letter-spacing: 0px;/*不遺傳*/
+    }
+    .texts li:hover {
+        font-weight: 500;/*不遺傳*/
+        letter-spacing: 0px;/*不遺傳*/
     }
 
     .icons {
@@ -279,6 +297,21 @@ nav {
     .dropdown-plant{
         position: relative;
     }
+    .dropdown-plant p{/*"植物^"*/
+        font-weight: 400;/*不遺傳*/
+        letter-spacing: 0px;/*不遺傳*/
+    }
+    .dropdown-about p{/*"關於^"*/
+        font-weight: 400;/*不遺傳*/
+        letter-spacing: 0px;/*不遺傳*/
+    }
+    .dropdown-plant :hover p{
+        font-weight: 500;/*不遺傳*/
+    }
+    .dropdown-about p{/*"關於^"*/
+        font-weight: 400;/*不遺傳*/
+        letter-spacing: 0px;/*不遺傳*/
+    }
     .dropdown-content-plant{
         position: absolute;
         display: flex;
@@ -299,6 +332,8 @@ nav {
         box-shadow: 0 4px 10px #0002;
         
         
+        
+        
     }
     .dropdown-content-plant > li a{
         height: 48px;
@@ -314,7 +349,12 @@ nav {
         background-color: #fff6;
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-
+    }
+    .dropdown-plant:hover p {
+        font-weight: 500;
+    }
+    .dropdown-about:hover p {
+        font-weight: 500;
     }
 
 
@@ -355,9 +395,9 @@ nav {
         color: #3D7E92;
         font-weight: 500;
     }
-    .texts li:hover > *:not(p) {
+    .texts li:hover a *:not(p) {
         color: #3D7E92;
-        font-weight: 400;
+        font-weight: 500;
     }
 
     .texts li a:hover {
@@ -2072,6 +2112,9 @@ nav {
 ========================================
 ========================================
 */
+#products-body {
+    background-color: #fafcfe;
+}
 * img {
     width: 100%;
     display: block;
@@ -2111,30 +2154,32 @@ nav {
 .goods-container {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 10px 0 10px;
-    column-gap: 10px;
+    margin: 0 16px 40px 16px;
+    column-gap: 16px;
     row-gap: 40px;
 }
 .goods-card {
-    width: calc(50% - 5px);
-    aspect-ratio: 3/5.5;
+    width: calc(50% - 8px);
+    aspect-ratio: 3/5.3;
     display: flex;
     flex-direction: column;
     flex-direction: start;
-    border: 1px solid #000;
     box-sizing: border-box; 
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px #0002;
 }
 .goods-card a{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    aspect-ratio: 3/5.5;
+    gap: 12px;
+    aspect-ratio: 3/5.3;
     color: #000;
     text-decoration: none;
 
 }
 .goods-card-imagebox {
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     overflow: hidden;
 }
 
@@ -2146,19 +2191,24 @@ nav {
     align-items: center;
 }
 .goods-card-title {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     margin-bottom: 8px;
 }
 .goods-card-text {
+    font-size: 15px;
     color: #777;
-    
+    width: calc(100% - 20px);
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 1px;
 }
 
 .goods-card-price {
     margin-top: auto;
-    font-size: 20px;
-    font-weight: 500;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 400;
     color: #3D7E92;
     vertical-align: bottom; /* 添加這一行 */
     text-align: start;
@@ -2166,10 +2216,9 @@ nav {
 
 }
 .goods-card span {
-    font-size: 14px;
+    display: inline-block;
     font-family: 'Inter', sans-serif;
-    display: block;
-    margin-left:2px;
+    margin-right: 2px;
 
 
 }
