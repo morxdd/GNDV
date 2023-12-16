@@ -165,7 +165,7 @@ nav {
     justify-content: start;
 }
 .logobox a{
-    width: 120px;
+    width: 108px;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -2119,6 +2119,98 @@ nav {
     width: 100%;
     display: block;
 }
+.filter-button {
+    z-index: 2;
+}
+.filter-row{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 20px;
+    position: relative;
+}
+.toggle-filter-checkbox:checked ~ .filter-row .filter-pane {
+    left: 0;
+    top: 60px;
+    bottom: 0;
+    position: fixed;
+    background-color: #fff;
+}
+.toggle-filter-checkbox:checked ~ .pane-background {
+    opacity: 1;
+    z-index: 2;
+}
+
+.toggle-filter-checkbox{
+    display: none;
+}
+.filter-pane::-webkit-scrollbar {
+    display: none;
+}
+.filter-pane {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 40px 40px 80px 40px;
+    width: calc(75%);
+    background-color: #fff;
+    height: calc(100%);
+    transition: .5s ease;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: -100%;
+    line-height: 2.2;
+    font-weight: 400;
+    overflow: auto;
+    z-index: 3;
+}
+.pane-background {
+    position: fixed;
+    background-color: #000a;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: .5s ease;
+    
+}
+.pane-title{
+    font-size: 18px;
+    color: #0E677B;
+    font-weight: 300;
+}
+.pane-title a{
+    color: #0E677B;
+    text-decoration: none;
+}
+.pane-title a:hover{
+    font-weight: 400;
+}
+.pane-text{
+    font-size: 16px;
+    color: #444;
+    font-weight: 400;
+}
+.pane-line{
+    height: 1px;
+    width: 100%;
+    background-color: #aaa;
+    margin: 20px 0;
+    align-self: center;
+}
+
+
+
+
+
+
 .goods-banner-container {
         margin: 60px 0 20px 0; 
         display: flex;
