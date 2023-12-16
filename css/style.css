@@ -1115,10 +1115,11 @@ nav {
     .hotpin-card-price {
         font-family: 'Inter', sans-serif;
         font-size: 24px;
-        font-weight: 400;
+        font-weight: 600;
         color: #3D7E92;
         margin: 0px 0 8px 0;
     }
+
 }
 /* _________來去逛逛_________ */
 .shopping-container {
@@ -2120,6 +2121,8 @@ nav {
     display: flex;
     flex-direction: column;
     flex-direction: start;
+    border: 1px solid #000;
+    box-sizing: border-box; 
 }
 .goods-card a{
     display: flex;
@@ -2131,7 +2134,7 @@ nav {
 
 }
 .goods-card-imagebox {
-    border-radius: 36px;
+    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -2140,7 +2143,7 @@ nav {
     flex-direction: column;
     flex-grow: 1;
     width: 100%;
-    text-align: center;
+    align-items: center;
 }
 .goods-card-title {
     font-size: 20px;
@@ -2149,12 +2152,25 @@ nav {
 }
 .goods-card-text {
     color: #777;
+    
 }
+
 .goods-card-price {
     margin-top: auto;
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 500;
     color: #3D7E92;
+    vertical-align: bottom; /* 添加這一行 */
+    text-align: start;
+
+
+}
+.goods-card span {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    display: block;
+    margin-left:2px;
+
+
 }
 
