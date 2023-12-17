@@ -2136,10 +2136,16 @@ nav {
     background-color: #fff;
     padding: 4px 16px 4px 16px;
     border-radius: 100px;
-    border: 1px solid #0E677B;
+    border: 1px solid #97E44A;
+    cursor: pointer;
+}
+.filter-button:hover {
+    background-color: #97E44A;
+    border: 1px solid transparent;
     
-
-    
+}
+.filter-order {
+    cursor: pointer;
 }
 .filter-row{
     max-width: 1520px;
