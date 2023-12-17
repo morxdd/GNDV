@@ -166,6 +166,68 @@
             
         </div>
     </div>
-
+    <script>
+        //點擊漢堡icon，選單打開/關閉的事件處理器
+        document.getElementById('hamburger-icon').addEventListener('click', function() {
+            var menu = document.getElementById('nav-menu');
+            if (menu.style.right === '0px') {
+                menu.style.right = '-100%'; // 隐藏
+            } else {
+                menu.style.right = '0px'; // 显示
+            }
+        });
+    </script>
+    <script>
+        //點擊叉叉icon，選單打開/關閉的事件處理器
+        document.getElementById('xx').addEventListener('click', function() {
+        var menu = document.getElementById('nav-menu');
+        if (menu.style.right === '0px') {
+            menu.style.right = '-100%'; // 隐藏
+        } else {
+            menu.style.right = '0px'; // 显示
+        }
+    });
+    </script>
+    <script>
+        //阻止漢堡面板的穿透滾動
+        document.querySelector('#nav-menu').addEventListener('wheel', function(event) {
+            var deltaY = event.deltaY;
+            var contentHeight = this.scrollHeight;
+            var visibleHeight = this.offsetHeight;
+            var scrollTop = this.scrollTop;
+    
+            if ((scrollTop === 0 && deltaY < 0) || (scrollTop + visibleHeight >= contentHeight && deltaY > 0)) {
+                event.preventDefault();
+            }
+        }, { passive: false });
+    
+    </script>
+    <script>
+        //漢堡面板的下拉選單
+        document.addEventListener('DOMContentLoaded', function () {
+            var dropdowns = document.querySelectorAll('.dropdown');
+    
+            dropdowns.forEach(function (dropdown) {
+                dropdown.addEventListener('click', function () {
+                    // 每次点击时都检查视口宽度
+                    if (window.innerWidth < 768) {
+                        var dropdownContent = this.nextElementSibling;
+                        var arrowKeyImg = this.querySelector('.arrowKeyImg'); // 获取当前箭头图像
+    
+                        // 切换内容高度
+                        if (dropdownContent.style.height && dropdownContent.style.height !== '0px') {
+                            dropdownContent.style.height = '0px';
+                        } else {
+                            dropdownContent.style.height = dropdownContent.scrollHeight + 'px';
+                        }
+    
+                        // 切换箭头旋转状态
+                        arrowKeyImg.classList.toggle('rotated');
+                    } 
+                });
+            });
+        });
+    
+    </script>
 </body>
 </html>
