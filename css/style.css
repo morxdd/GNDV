@@ -2493,3 +2493,63 @@ nav {
         width: calc(360px);
     }
 }
+/* ====================== */
+/* =======天堂鳥內頁======= */
+/* ====================== */
+.product-container {
+    max-width: 1520px ;
+    display: flex;
+    flex-direction: column;
+    margin: 60px 20px 20px 20px;
+    background-color: #eee;
+}
+.product-titlebox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+    align-items: end;
+}
+.product-title {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.product-carebtn {
+    z-index: 2;
+    background-color: #fff;
+    padding: 4px 16px 4px 16px;
+    border-radius: 100px;
+    border: 1px solid #97E44A;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000;
+}
+.filter-button:hover {
+    background-color: #97E44A;
+    border: 1px solid transparent;
+}
+.product-imagegroup {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.product-main-imagebox {
+    width: 100%;
+    border-radius: 36px;
+    overflow: hidden;    
+}
+.product-smallimageboxs {
+    background-color: #ddd;
+    width: 100%;
+    gap: 20px;
+    overflow: auto;
+    aspect-ratio: 4/1;
+    display: flex;
+}
+.product-smallimagebox {
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: #000;
+}
+
