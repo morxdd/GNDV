@@ -2234,7 +2234,7 @@ nav {
 }
 .goods-banner-imagebox {
     width: 100%;
-    aspect-ratio: 2/1;
+    aspect-ratio: 1/1;
     background-color: #143766;
     overflow: hidden;
     border-radius: 36px;
@@ -2356,11 +2356,11 @@ nav {
     }
     .goods-banner-imagebox {
         width: calc(66.666666% - 10px);
+        aspect-ratio: 2/1;
     }
 
     .goods-container {
         justify-content: space-between;
-        background-color: #3366AA;
         transition: .36s ease;
         width: 84%;
         display: flex;
@@ -2380,7 +2380,7 @@ nav {
         display: flex;
         justify-content: space-between;
         margin: 0px 0 40px 0;
-        background-color: #006652;
+
         width: 100%;
         transition: .36s ease;
     }
@@ -2392,8 +2392,12 @@ nav {
     .goods-card {
         width: calc(25vw - 25px);
         aspect-ratio: 1/1;
-        background-color: #FA0;
+        background-color: #fff;
         flex: 0 0 auto;
+    }
+    .goods-card a{
+        aspect-ratio: 1/1;
+
     }
 
     .filter-pane{
@@ -2403,16 +2407,17 @@ nav {
         padding: 40px;
         width: calc(25% - 10px);
         background-color: #fafcfe;
-        height: calc(100% + 10px) ;
+
         border-radius: 48px;
         transition: .36s ease;
         position: absolute;
-        left: -100%;
+        left: -25%;
         line-height: 2.2;
         font-weight: 400;
         top: -20px;
         border-radius: 0;
         z-index: 10;
+        border-right: 1px solid #ccc;
         
     }
     .toggle-filter-checkbox:checked ~ .filter-row .filter-pane {
