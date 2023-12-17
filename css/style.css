@@ -2544,18 +2544,25 @@ nav {
     overflow: hidden;    
 }
 .product-smallimageboxs {
-    background-color: #ddd;
     width: 100%;
-    gap: 20px;
+    gap: 12px;
     overflow: auto;
     aspect-ratio: 3.5/1;
     display: flex;
+    justify-content: start;
 }
 .product-smallimagebox {
+    display: flex;
     height: 100%;
     aspect-ratio: 1/1;
     box-sizing: border-box;
     border: 1px solid transparent;
+    border-radius: 12px;
+}
+.product-smallimagebox img {
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: center center;
 }
 .product-smallimagebox:hover {
     border: 1px solid #aaa;
@@ -2569,7 +2576,7 @@ nav {
 }
 .product-textbox p{
     white-space: pre-wrap;
-    line-height: 1.2;
+    line-height: 1.36;
     
 }
 .dot-p {
