@@ -965,6 +965,7 @@ nav {
     overflow: hidden;
     border-radius: 48px 48px 0 0;
 }
+
 .hotpin-card-first{
     margin-left: 80px;
 }
@@ -1017,6 +1018,27 @@ nav {
     width: 100%;
     display: block;
 }
+.hotpin-card img {
+    transition: transform 0.36s;
+    transform-origin: center 84%; /* 設置動畫效果 */
+    transform: scale(1); /* 初始狀態為原始尺寸 */
+}
+.hotpin-card:hover img {
+    transform: scale(1.08); /* 懸停時放大到 110% */
+}
+.newpin-card img {
+    transition: transform 0.36s;
+    transform-origin: center 84%; /* 設置動畫效果 */
+    transform: scale(1); /* 初始狀態為原始尺寸 */
+}
+
+.newpin-card:hover img {
+    transform: scale(1.08); /* 懸停時放大到 110% */
+}
+
+/* ======== */
+
+
 
 @media (width > 480px) {
     .hotpin-carousel::-webkit-scrollbar {
@@ -1957,9 +1979,7 @@ nav {
     .comment-LRarr:hover {
         background-color: #fff4;
     }
-    #comment-leftarr {
-        justify-content: start;
-    }
+
     .comment-LRarr img {
         width: 92%;
         opacity: 0.8;
@@ -1968,13 +1988,13 @@ nav {
     }
     #comment-leftarr {
         position: absolute;
-        left: 12px;
+        left: -8px;
         justify-content: start;
 
     }
     #comment-rightarr {
         position: absolute;
-        right: 12px;
+        right: -8px;
         justify-content: end;
     }
 }
@@ -2301,6 +2321,8 @@ nav {
     background-color: #fff;
     box-shadow: 0 4px 20px #0002;
 }
+
+
 .goods-card a{
     display: flex;
     flex-direction: column;
@@ -2398,13 +2420,36 @@ nav {
 
     .goods-card {
         width: calc(25vw - 25px);
-        aspect-ratio: 1/1;
+        aspect-ratio: 1/1.4;
         background-color: #fff;
         flex: 0 0 auto;
+        border-radius: 48px;
     }
     .goods-card a{
+        aspect-ratio: 1/1.4;
+    }
+    .goods-card-title {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    .goods-card-text {
+        font-size: 16px;
+    }
+    .goods-card-imagebox {
+        overflow: hidden;
         aspect-ratio: 1/1;
-
+        border-radius: 48px 48px 0 0;
+    }
+    .goods-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.36s ease;
+        transform-origin: center 84%; /* 設置變形的原點為水平中間和垂直底部 */
+        transform: scale(1); /* 初始狀態為原始尺寸 */
+    }
+    .goods-card:hover img {
+        transform: scale(1.08); /* 懸停時放大到 110% */
     }
 
     .filter-pane{
@@ -2501,7 +2546,7 @@ nav {
     max-width: 1520px ;
     display: flex;
     flex-direction: column;
-    margin: 60px 20px 20px 20px;
+    margin: 60px 20px 80px 20px;
     background-color: #fff;
 }
 .product-titlebox {
@@ -2594,6 +2639,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 24px;
 }
 .product-option-title {
     font-size: 24px;
@@ -2629,10 +2675,111 @@ nav {
     }
 }
 .product-option-btn:hover {
-    border: 1px solid #aaa;
+    border: 1px solid #999;
 }
 .product-greyline {
     width: calc(100% + 40px); 
     margin: 0 -20px;
 }
+.product-option-crtext {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.product-option-color {
+    background-color: #fa0;
+    width: 40px;
+    height: 40px;
+    border-radius: 200px;
+    cursor: pointer;
+    box-shadow: inset .6px 2.4px 4px rgba(0, 0, 0, 0.5);
+    border: 0.5px solid #fff;
+}
+.cr1 {
+    background-color: #eee;
+    box-shadow: inset .6px 2.4px 4px rgba(0, 0, 0, 0.5),
+                0 0 0 4px white, /* 间隙，使用与背景相同的颜色 */
+                0 0 0 6px #ccc; /* 灰色邊框 */
+}
+.cr2 {
+    background-color: #716E68;
+    box-shadow: inset .6px 2.4px 4px rgba(0, 0, 0, 0.5),
+                0 0 0 4px white, /* 间隙，使用与背景相同的颜色 */
+                0 0 0 6px #ccc; /* 灰色邊框 */
+}
+.cr3 {
+    background-color: #AF5145;
+    box-shadow: inset .6px 2.4px 4px rgba(0, 0, 0, 0.5),
+                0 0 0 4px white, /* 间隙，使用与背景相同的颜色 */
+                0 0 0 6px #ccc; /* 灰色邊框 */
+}
+.cr4 {
+    background-color: #4F52A4;
+    box-shadow: inset .6px 2.4px 4px rgba(0, 0, 0, 0.5),
+                0 0 0 4px white, /* 间隙，使用与背景相同的颜色 */
+                0 0 0 6px #ccc; /* 灰色邊框 */
+}
+.cr5 {
+    background-color: #B5B0A6;
+    box-shadow: inset .6px 2.4px 4px rgba(0, 0, 0, 0.5),
+                0 0 0 4px white, /* 间隙，使用与背景相同的颜色 */
+                0 0 0 6px #ccc; /* 灰色邊框 */
+}
+.cr1:hover {
+    background-color: #eee;
+    box-shadow: inset .6px 2.4px 4px rgba(0, 0, 0, 0.5),
+                0 0 0 4px white, /* 间隙，使用与背景相同的颜色 */
+                0 0 0 6px #999; /* 灰色邊框 */
+}
+.cr2:hover {
+    background-color: #716E68;
+    box-shadow: inset .6px 2.4px 4px rgba(0, 0, 0, 0.5),
+                0 0 0 4px white, /* 间隙，使用与背景相同的颜色 */
+                0 0 0 6px #999; /* 灰色邊框 */
+}
+.cr3:hover  {
+    background-color: #AF5145;
+    box-shadow: inset .6px 2.4px 4px rgba(0, 0, 0, 0.5),
+                0 0 0 4px white, /* 间隙，使用与背景相同的颜色 */
+                0 0 0 6px #999; /* 灰色邊框 */
+}
+.cr4:hover  {
+    background-color: #4F52A4;
+    box-shadow: inset .6px 2.4px 4px rgba(0, 0, 0, 0.5),
+                0 0 0 4px white, /* 间隙，使用与背景相同的颜色 */
+                0 0 0 6px #999; /* 灰色邊框 */
+}
+.cr5:hover  {
+    background-color: #B5B0A6;
+    box-shadow: inset .6px 2.4px 4px rgba(0, 0, 0, 0.5),
+                0 0 0 4px white, /* 间隙，使用与背景相同的颜色 */
+                0 0 0 6px #999; /* 灰色邊框 */
+}
+.product-pricebox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+}
+.product-price {
+    font-size: 30px;
+    font-weight: 400;
+}
+.product-price span {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    margin-right: 4px;
+    font-size: 29px;
+}
+
+
+.product-buycar {
+    background-color: #3D7E92;
+    color: #fff;
+    padding: 12px 32px 12px 32px;
+    border-radius: 12px;
+    border: 1px solid #3D7E92;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
