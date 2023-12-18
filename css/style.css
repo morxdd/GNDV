@@ -848,6 +848,7 @@ nav {
     }
     #leftarr {
         justify-content: start;
+        z-index: 20;
     }
     .LRarr img {
         width: 92%;
@@ -1129,6 +1130,7 @@ nav {
         position: absolute;
         left: -8px;
         justify-content: start;
+        z-index: 20;
 
     }
     #hotpin-rightarr {
@@ -1696,14 +1698,15 @@ nav {
     .server-scroll {
         display: flex;
         flex-direction: row;
-        overflow:visible;
-        gap: 20px;
+        overflow: visible;
+        gap: 80px;
         box-sizing: border-box;
         justify-content: center;
+        
     }
     .server-card {
         flex: 0 0 auto;
-        width: calc((100% - 40px) / 3);
+        width: calc(25%);
         aspect-ratio: 3/4;
         scroll-snap-align: center;
         display: flex;
@@ -1712,7 +1715,6 @@ nav {
         justify-content: space-between;
 
     }
-    
     .servar-title {
         height: 120px;
         display: flex;
@@ -2263,7 +2265,7 @@ nav {
 .goods-banner-imagebox {
     width: 100%;
     aspect-ratio: 1/1;
-    background-color: #143766;
+    background-color: #ccc;
     overflow: hidden;
     border-radius: 36px;
 
@@ -2549,7 +2551,7 @@ nav {
     max-width: 1520px ;
     display: flex;
     flex-direction: column;
-    margin: 60px 20px 80px 20px;
+    margin: 60px 20px 160px 20px;
     background-color: #fff;
 }
 .product-titlebox {
@@ -2648,6 +2650,7 @@ nav {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 12px;
+    align-self: start;
 }
 .product-option-text {
     display: flex;
@@ -2786,3 +2789,381 @@ nav {
     font-size: 16px;
     letter-spacing: 1px;
 }
+/* ============================== */
+.likepin-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 40px 0;
+    flex-direction: column;
+    align-items: center;
+
+}
+.likepin-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 40px 0;
+}
+.likepin-row {
+    display: flex;
+    column-gap: 20px;
+    row-gap: 40px;
+    overflow: auto;
+    scroll-margin: 20px;
+    padding: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-margin-left: 20px;
+
+
+}
+.likepin-card {
+    flex: 0 0 auto;
+    width: calc(80% - 10px);
+    aspect-ratio: 3/4.2;
+    display: flex;
+    flex-direction: column;
+    flex-direction: start;
+    box-sizing: border-box; 
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px #0002;
+}
+
+
+.likepin-card a{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    aspect-ratio: 3/4.5;
+    color: #000;
+    text-decoration: none;
+
+}
+.likepin-card-imagebox {
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.likepin-card-textbox {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    align-items: center;
+}
+.likepin-card-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.likepin-card-text {
+    font-size: 20px;
+    color: #777;
+    width: calc(100% - 20px);
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.likepin-card-price {
+    margin-top: auto;
+    margin-bottom: 24px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #3D7E92;
+    vertical-align: bottom; /* 添加這一行 */
+    text-align: start;
+
+
+}
+.likepin-card span {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    margin-right: 2px;
+}
+@media (width > 768px) {
+    .product-container {
+        display: flex;
+        flex-direction: row;
+        margin: 60px 12% 160px 12%;
+        gap: 40px;
+    }
+    .product-titlebox {
+        display: none;
+    }
+    .product-titlebox-pc {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0 20px 0;
+        align-items: end;
+    }
+
+    .product-smallimageboxs {
+        aspect-ratio: 4.5/1;
+        gap: 20px;
+    }
+    .likepin-container {
+        margin: 0 20px 40px 20px;
+    }
+    .likepin-row {
+        display: flex;
+        column-gap: 20px;
+        row-gap: 40px;
+        overflow: auto;
+        padding: 0;
+        width: 100%;
+        padding: 20px 0;
+        overflow: visible;
+    
+    
+    }
+    .likepin-card {
+        flex: 0 0 auto;
+        width: calc(25% - 15px);
+        aspect-ratio: 3/4.5;
+        display: flex;
+        flex-direction: column;
+        flex-direction: start;
+        box-sizing: border-box; 
+        border-radius: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 20px #0002;
+    }
+    
+    
+    .likepin-card a{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        aspect-ratio: 3/4.5;
+        color: #000;
+        text-decoration: none;
+    
+    }
+}
+.about-banner-container {
+    margin: 60px 20px 80px 20px;
+    background-image: url(../images/other/about_banner.jpg);
+    max-width: 1520px ;
+    aspect-ratio: 1/1.2;
+    box-sizing: border-box;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    border-radius: 48px;
+}
+.about-banner-textbox {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    gap: 20px;
+    text-shadow: 2px 4px 10px #000a;
+    
+}
+.about-banner-title {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
+}
+.about-banner-text {
+    line-height: 1.5;
+    font-size: 16px;
+}
+.about-who-container {
+    max-width: 1520px;
+    margin: 0 20px 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+.about-who-imagebox {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 4/5;
+}
+.about-who-imagebox img{
+    object-fit: cover;
+    object-position: center 60%;
+    height: 100%;
+}
+.about-who-textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+.about-who-textbox h2{
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.greenline {
+    height: 2px;
+    width: calc(100% - 40px);
+    background-color: #3D7E92;
+}
+.about-who-textbox p{
+    margin: 0 20px;
+    line-height: 1.5;
+}
+
+
+.about-eco-container {
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px 20px 20px;
+    max-width: 1520px;
+    
+}
+.about-eco-bar {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 32px;
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 48px;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #3366AA, #143766);
+    margin-bottom: 20px;
+}
+.about-eco-textbox {
+    order: 1; /* 將文本盒子設置為第一順位 */
+    margin: 20px 0 0 0;
+    position: relative;
+    color: #fff;
+}
+.about-eco-title {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin: 0 0 20px 0;
+    
+    display: block;
+}
+.about-eco-text {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.about-eco-imagebox {
+    order: 2; /* 將圖像盒子設置為第二順位 */
+    aspect-ratio: 3/2;
+    overflow: hidden;
+    border-radius: 28px;
+    width: calc(100% + 24px);
+    align-self: center;
+    margin-bottom: -12px;
+}
+.about-eco-imagebox img {
+    object-fit: cover;
+    height: 100%;
+}
+.about-ecothings-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about-ecothings-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about-ecothing-card {
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fa0;
+    box-sizing: border-box;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+}
+.about-ecothing-title {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.about-ecothing-imagebox {
+    width: calc(100% + 40px );
+    overflow: hidden;
+    aspect-ratio: 2/1;
+    border-radius: 48px;
+}
+.about-ecothing-imagebox img{
+    object-fit: cover;
+    object-position: center center;
+    height: 100%;
+}
+.col-line {
+    width: 1px;
+    height: 100%;
+    display: none;
+}
+.about-statement-container {
+    max-width: 1520px;
+    aspect-ratio: 4/5;
+    margin: 0 0px 20px 0px;
+    background-color: ccc;
+    box-sizing: border-box;
+    background-image: url(../images/other/abbg2.jpg);
+    background-size: 300%;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 8px 10px #0002 inset;
+    border-top: 1px solid #ccc; 
+    border-bottom: 1px solid #ccc; 
+    
+}
+.about-statement-card {
+    width: 80%;
+    background-color: #fff6;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid #ccc6;
+    box-shadow: 0 4px 10px #0002;
+    box-sizing: border-box;
+    padding: 32px 40px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    border-radius: 48px;
+    align-items: center;
+    position: relative;
+}
+.about-statement-card-text {
+    line-height: 1.5;
+}
+.about-statement-card-imagebox {
+    width: 52%;
+}
+.about-statement-logobox {
+    width: 16%;
+    position: absolute;
+    bottom: 12px;
+    right: 10%;
+}
+.about-statement-logobox img {
+    height: 100%;
+}
+.about-btn-container {
+    max-width: 1520px;
+    
+}
+
