@@ -18,6 +18,7 @@
         <link rel="icon" href="../images/logo/GNDVlogosmall-09.svg" type="image/x-icon">
     </head>
 <body>
+    <div class="product-black"></div>
     <nav>
         <div class="logobox">
             <a href="../index.html">
@@ -89,7 +90,7 @@
             <!-- 電腦版隱藏 -->
         </div>
         <div class="product-imagegroup">
-            <div class="product-main-imagebox">
+            <div class="product-main-imagebox" id="product-main-imagebox">
                 <img src="../images/plants/23.jpg" alt="">
             </div>
             <div class="product-smallimageboxs">
@@ -135,14 +136,14 @@
                         1. 選擇植物尺寸
                     </div>
                     <div class="product-option-text">
-                        <button class="product-option-btn">
+                        <button class="product-option-btn size-btn">
                             15公分以下
                         </button>
-                        <button class="product-option-btn">
+                        <button class="product-option-btn size-btn">
                             15-30公分
                         </button>
-                        <button class="product-option-btn">
-                            30-60公分以下
+                        <button class="product-option-btn size-btn">
+                            30-60公分
                         </button>
                     </div>
                 </div>
@@ -152,16 +153,16 @@
                         2. 選擇盆器
                     </div>
                     <div class="product-option-text">
-                        <button class="product-option-btn">
+                        <button class="product-option-btn pot-btn">
                             種植盆
                         </button>
-                        <button class="product-option-btn">
+                        <button class="product-option-btn pot-btn">
                             授予盆
                         </button>
-                        <button class="product-option-btn">
+                        <button class="product-option-btn pot-btn">
                             海德盆
                         </button>
-                        <button class="product-option-btn">
+                        <button class="product-option-btn pot-btn">
                             升級盆
                         </button>
                     </div>
@@ -182,7 +183,7 @@
                 <div class="greyline product-greyline"></div>
             </div>
             <div class="product-pricebox">
-                <div class="product-price"><span>$</span>1,230</div>
+                <div class="product-price"><span>$</span><span id="product-price">680</span></div>
                 <button class="product-buycar">加入購物車</button>
             </div>
         </div>
@@ -353,6 +354,147 @@
             });
         });
     
+    </script>
+    <script>
+        //點擊按鈕換顏色，選擇植物尺寸
+        function sizeCheckColor() {
+            const sizeBtns = document.getElementsByClassName('size-btn');
+            let productPrice = document.getElementById('product-price')
+            console.log(productPrice.innerText);
+            sizeBtns[0].classList.add("product-clickcolor");
+            console.log(sizeBtns);
+            for(let i = 0; i < sizeBtns.length; i++){
+            sizeBtns[i].addEventListener('click', function(){
+                console.log(i);
+                for(let j = 0; j < sizeBtns.length; j++){
+                    sizeBtns[j].classList.remove("product-clickcolor");
+                }
+                this.classList.add("product-clickcolor");
+            });
+        }
+     }
+     // 當文檔加載完成時
+     document.addEventListener('DOMContentLoaded', sizeCheckColor);
+     </script>
+     <script>
+        function calculate(){
+            const sizeBtns = document.getElementsByClassName('size-btn');
+            const potBtns = document.getElementsByClassName('pot-btn');
+            let productPrice = document.getElementById('product-price')
+            let sizeIndex = 0;
+            let potIndex = 0;
+            for(let k = 0; k < sizeBtns.length; k++){
+                var n = sizeBtns[k].classList.value.includes("product-clickcolor");
+                if(n == true){
+                    sizeIndex = k
+                }
+            }
+            for(let w = 0; w < potBtns.length; w++){
+                var q = potBtns[w].classList.value.includes("product-clickcolor");
+                if(q == true){
+                    potIndex = w
+                }
+            }
+
+
+
+            let f = 680;
+            if(sizeIndex == 0){
+                f = 680
+            } else if(sizeIndex == 1){
+                f = 920
+            } else if(sizeIndex == 2){
+                f = 1360
+            }
+            console.log(potIndex)
+            if(potIndex == 0){
+                productPrice.innerText = f + 0
+            } else if(potIndex == 1){
+                productPrice.innerText = f + 240
+            } else if(potIndex == 2){
+                productPrice.innerText = f + 360
+            } else if(potIndex == 3){
+                productPrice.innerText = f + 480
+            
+            }
+        }
+        //點擊按鈕換顏色，選擇盆器22222222
+        function potCheckColor() {
+            
+            
+            const sizeBtns = document.getElementsByClassName('size-btn');
+            sizeBtns[0].classList.add("product-clickcolor");
+            for(let i = 0; i < sizeBtns.length; i++){
+                sizeBtns[i].addEventListener('click', function(){
+                    for(let j = 0; j < sizeBtns.length; j++){
+                        sizeBtns[j].classList.remove("product-clickcolor");
+                    }
+                    this.classList.add("product-clickcolor");
+                    calculate()
+                });
+            }
+
+            const potBtns = document.getElementsByClassName('pot-btn');
+            potBtns[0].classList.add("product-clickcolor");
+            let sizeIndex = 0;
+            for(let i = 0; i < potBtns.length; i++){
+                potBtns[i].addEventListener('click', function(){
+                    const sizeBtns = document.getElementsByClassName('size-btn');
+                    for(let j = 0; j < potBtns.length; j++){
+                        potBtns[j].classList.remove("product-clickcolor");
+                    }
+                    this.classList.add("product-clickcolor");
+                    calculate()
+                    
+                    
+                    
+                    
+                    
+                    
+
+            });
+        }
+     }
+     // 當文檔加載完成時
+     document.addEventListener('DOMContentLoaded', potCheckColor);
+     </script>
+     <script>
+        //點擊按鈕換顏色，選擇顏色
+         function colorCheckColor() {
+            console.log("aaaaaa")
+         const colorBtns = document.getElementsByClassName('product-option-color');
+         colorBtns[0].classList.add("product-option-color-click");
+        console.log(colorBtns);
+        for(let i = 0; i < colorBtns.length; i++){
+            colorBtns[i].addEventListener('click', function(i){
+                console.log(i);
+                for(let j = 0; j < colorBtns.length; j++){
+                    colorBtns[j].classList.remove("product-option-color-click");
+                }
+                this.classList.add("product-option-color-click");
+            });
+        }
+     }
+     // 當文檔加載完成時
+    document.addEventListener('DOMContentLoaded', colorCheckColor);
+     </script>
+     <!-- ====================== -->
+     <script>
+        document.addEventListener('DOMContentLoaded', function(){
+
+            let mainImg = document.querySelector('#product-main-imagebox img')
+            console.log(mainImg.src)
+            let subImg = document.querySelectorAll('.product-smallimagebox img')
+            console.log(subImg)
+            for(let i = 0; i < subImg.length; i++){
+                subImg[i].addEventListener('click', function(){
+                    console.log(subImg[i].src)
+                    mainImg.src = subImg[i].src
+                });
+            }
+            
+
+        });
     </script>
 </body>
 </html>

@@ -2136,6 +2136,12 @@ nav {
 ========================================
 ========================================
 */
+
+
+
+
+
+/* ========== */
 #products-body {
     background-color: #fafcfe;
 }
@@ -2547,6 +2553,16 @@ nav {
 /* ====================== */
 /* =======天堂鳥內頁======= */
 /* ====================== */
+
+/* ====================== */
+.product-black {
+
+}
+
+
+
+
+
 .product-container {
     max-width: 1520px ;
     display: flex;
@@ -2678,6 +2694,12 @@ nav {
     align-items: center; /* 垂直居中 */
     justify-content: center; /* 水平居中 */
 }
+.product-clickcolor {
+    border: 1px solid #3D7E92;
+    color: #fff;
+    background-color: red;
+}
+
 @media (width < 360px) {
     .product-option-btn{
         font-size: 4vw; /* 視窗寬度大於400px時固定字體大小 */
@@ -2763,6 +2785,11 @@ nav {
     box-shadow: inset .6px 2.4px 4px rgba(0, 0, 0, 0.5),
                 0 0 0 4px white, /* 间隙，使用与背景相同的颜色 */
                 0 0 0 6px #999; /* 灰色邊框 */
+}
+.product-option-color-click {
+    box-shadow: inset .6px 2.4px 4px rgba(0, 0, 0, 0.5),
+                0 0 0 4px white, /* 间隙，使用与背景相同的颜色 */
+                0 0 0 6px #f00; /* 灰色邊框 */
 }
 .product-pricebox {
     display: flex;
