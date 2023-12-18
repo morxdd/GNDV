@@ -18,7 +18,68 @@
         <link rel="icon" href="../images/logo/GNDVlogosmall-09.svg" type="image/x-icon">
     </head>
 <body>
-    <div class="product-black"></div>
+    <div id="product-lightbox">
+        <button id="product-lightbox-xxbox">
+            <img src="../images/icons/xx.svg" alt="">
+        </button>
+        <div class="product-lightbox-black">
+        </div>
+        <div id="product-lightbox-card">
+            
+            <div class="product-lightbox-imagebox">
+                <img src="../images/plants/bg-none/23.png" alt="">
+            </div>
+            <div class="product-lightbox-title">
+                <h2>天堂鳥的護理</h2>
+            </div>
+            <div class="product-lightbox-textbox">
+                <div class="product-lightbox-textbox-title">
+                    <h2>放置</h2>
+                </div>
+                <div class="greyline"></div>
+                <div class="product-lightbox-textbox-text">
+                    <p>　　天堂鳥(鶴望蘭) 擁有令人驚嘆的大型熱帶葉子，在南部非洲的荒野中，它們的葉子可達 600 公分高！在人類空間中，它們更有可能站立在 90 公分至 240 公分高的任何地方，但仍然是大多數室內植物愛好者的最愛之一。由於其茂盛的葉子的巨大尺寸而受到人們的喜愛。
+                    </p>
+                    <p>　　為你的天堂鳥選擇一個遠離通風口和氣流的位置，讓植物在南部、西部或東部暴露至少四個小時。雖然天堂鳥可以忍受中等光照條件，但如果沒有充足的陽光，天堂鳥就無法長期繁衍生息，因此我們始終建議將它們放在明亮的光線下。
+                    </p>
+                    <div class="product-lightbox-textbox-textbox">
+                        專業提醒：修剪天堂鳥上較老的葉子，因為它們會隨著時間的推移而下垂並產生更多的裂痕。新葉總是從中心長出，保持植物飽滿和平衡。
+                    </div>
+                    <div class="product-lightbox-textbox-bananabox">
+                        <div class="product-lightbox-textbox-bananabox-imagebox">
+                            <img src="../images/other/Bird-Of-Paradise-Leaf_Closeup.jpeg" alt="">
+                        </div>
+                        <div class="product-lightbox-textbox-bananabox-textbox">
+                            <p>
+                                天堂鳥植物經常與香蕉植物混淆，但香蕉具有螺旋葉生長模式，而天堂鳥植物具有交替葉生長模式。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-lightbox-textbox">
+                <div class="product-lightbox-textbox-title">
+                    <h2>例行維護</h2>
+                </div>
+                <div class="greyline"></div>
+                <div class="product-lightbox-textbox-text">
+                    <p>　　收到植物後請務必評估其澆水需求。在給你的植物喝水之前，最好先檢查土壤的濕度，以確保其表面下方不潮濕。 土壤探針是一種非常方便的工具，既可以檢查花盆深處的土壤濕度，也可以用於對過於潮濕的土壤進行通氣。
+                    </p>
+                    <p>　　天堂鳥喜歡潮濕（但不是濕透）的土壤，並且在澆水之間允許稍微乾燥。盡量不要讓盆土完全乾透，但也要避免澆水過多。允許頂部 2" - 3”兩次澆水之間土壤變乾，但低於該值應保持濕潤。這些植物在我們的自動澆水容器中生長得特別好。
+                    </p>
+                    <div class="product-lightbox-textbox-textbox">
+                        專業提示：在冬季，由於太陽的橢圓軌道，陽光較少，天堂鳥會經歷一個「休息」期，需要的水也較少。十月至二月，如果植物靠近乾熱源，則可以減少澆水量。一般來說，調整澆水量比調整澆水頻率更好。
+                    </div>
+                    <p>　　天堂鳥葉子的裂痕是自然的，可以讓光線進入植物的下部。讓您的植物遠離氣流，並使用加濕器、卵石托盤或噴霧器施加額外的濕度，以盡量減少開裂。
+                    </p>
+                    <p>　　請注意，如果您使用有機材料製成的容器來盆栽天堂鳥，我們強烈建議在下面使用防水碟以保護您的地板，因為濕氣可能會積聚在花盆下方，並會損壞木地板和地毯。
+                    </p>
+                    <p>　　請記住，每種植物都是獨特的生物，可能有不同的需求，特別是在它們各自的位置。注意你的天堂鳥的狀況及其澆水需求，你們將會擁有一段長久而幸福的關係。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
     <nav>
         <div class="logobox">
             <a href="../index.html">
@@ -84,7 +145,7 @@
             <div class="product-title">
                 <h1>天堂鳥</h1>
             </div>
-            <button class="product-carebtn">
+            <button id="product-carebtn">
                 護理指南
             </button>
             <!-- 電腦版隱藏 -->
@@ -247,9 +308,6 @@
             </a>
     </div>
     </div>
-        
-        
-            
     <footer class="footer-background">
         <div class="footer-container">
             <div class="footer-row">
@@ -495,6 +553,57 @@
             
 
         });
+    </script>
+    <script>
+        //護理指南叫出
+        document.addEventListener('DOMContentLoaded', function() {
+            function setupClickListener() {
+                // 打開 lightbox
+                var careButton = document.getElementById('product-carebtn');
+                if (careButton) {
+                    careButton.addEventListener('click', function() {
+                        var lightbox = document.getElementById('product-lightbox');
+                        if (lightbox) {
+                            lightbox.style.display = 'block'; // 顯示 lightbox
+                        }
+                    });
+                }
+
+                // 關閉 lightbox
+                var closeLightboxButton = document.getElementById('product-lightbox-xxbox');
+                if (closeLightboxButton) {
+                    closeLightboxButton.addEventListener('click', function() {
+                        var lightbox = document.getElementById('product-lightbox');
+                        if (lightbox) {
+                            lightbox.style.display = 'none'; // 隱藏 lightbox
+                        }
+                    });
+                }
+            }
+
+            function setupScrollPrevention() {
+                // 阻止滾動事件冒泡
+                var lightboxCard = document.getElementById('product-lightbox-card');
+                if (lightboxCard) {
+                    lightboxCard.addEventListener('wheel', function(event) {
+                        event.stopPropagation();
+                    });
+                }
+            }
+
+            function checkMediaQuery() {
+                if (window.matchMedia('(max-width: 600px)').matches) {
+                    // 如果視窗寬度小於或等於 600px
+                    setupClickListener();
+                    setupScrollPrevention();
+                }
+            }
+
+            window.addEventListener('resize', checkMediaQuery);
+
+            checkMediaQuery();
+        });
+
     </script>
 </body>
 </html>
