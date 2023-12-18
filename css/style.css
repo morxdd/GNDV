@@ -2561,6 +2561,9 @@ nav {
     margin: 20px 0 20px 0;
     align-items: end;
 }
+.product-titlebox-pc {
+    display: none;
+}
 .product-title {
     font-size: 36px;
     font-weight: 600;
@@ -3078,6 +3081,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
 }
 .about-ecothing-card {
     flex: 0 0 auto;
@@ -3106,7 +3110,7 @@ nav {
     line-height: 1.5;
 }
 .about-ecothing-imagebox {
-    width: calc(100% + 40px );
+    width: calc(100% + 40px);
     overflow: hidden;
     aspect-ratio: 2/1;
     border-radius: 28px;
@@ -3125,7 +3129,6 @@ nav {
     max-width: 1520px;
     aspect-ratio: 4/5;
     margin: 0 0px 40px 0px;
-    background-color: ccc;
     box-sizing: border-box;
     background-image: url(../images/other/abbg2.jpg);
     background-size: 300%;
@@ -3225,4 +3228,108 @@ nav {
 
 }
 
+@media (width > 768px) {
+    .about-banner-container {
+        aspect-ratio: 3/1;
+        margin: 60px 20px 20px 20px;
+        border-radius: 48px;
+    }
+    .about-banner-textbox {
+        width: 600px;
+    }
+    .about-banner-title {
+        white-space: nowrap;
+    }
+    .about-banner-title br {
+        display: none;
+    }
+    .about-who-container {
+        display: flex;
+        flex-direction: row;
+        margin: 0px 20px 20px 20px;
+    }
+    .who1 {
+        order: 2;
+    }
+    .who2 {
+        order: 1;
+    }
+    .about-who-textbox {
+        width: calc(33.3333333% - 10px );
+        margin: auto 0;
+    }
+    .about-who-imagebox {
+        aspect-ratio: 2/1;
+        width: calc(66.666666% - 10px );
+    }
+    .about-eco-container {
+        align-items: center;
 
+    }
+    .about-eco-bar {
+        display: flex;
+        flex-direction: row;
+        aspect-ratio: 4/1;
+        padding: 20px;
+        justify-content: space-between;
+        
+    }
+    .about-eco-imagebox {
+        width: calc(66.666666% - 10px);
+        overflow: hidden;
+        margin: 0;
+        aspect-ratio: 16/9;
+    }
+
+    .about-eco-imagebox img {
+        object-fit: cover;
+        height: 100%;
+    }
+    .about-eco-textbox {
+        width: calc(33.3333333% - 10px);
+        margin: auto 0 auto 20px ;
+    }
+    .about-ecothings-box {
+        display: flex;
+        flex-direction: row;
+    }
+    .about-ecothings-col {
+        gap: 240px;
+    }
+    .col-line {
+        width: 1px;
+        height: 100em;
+        background-color: #aaa;
+        display: block;
+    }
+    .about-ecothing-card {
+        aspect-ratio: 1/1;
+    }
+    .about-ecothing-title {
+        font-size: 36px;
+    }
+    .col1 {
+        padding-top: 160px;
+    }
+    .col2 {
+        margin-top: 320px;
+    }
+    .about-statement-container {
+        aspect-ratio: 16/9;
+        margin: 0 20px 40px 20px;
+        border-radius: 48px;
+        background-size: cover;
+    }    
+}
+
+@media (width > 1560px) {
+    .about-banner-container {
+        margin: 60px auto 20px auto;
+    }
+    .about-who-container {
+        margin: 0 auto 80px auto;
+    }
+    .about-eco-container {
+        margin: 0 auto 20px auto;
+    }
+}
