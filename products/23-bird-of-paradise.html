@@ -178,7 +178,7 @@
                 <div class="product-title">
                     <h1>天堂鳥</h1>
                 </div>
-                <button class="product-carebtn">
+                <button id="product-carebtn-pc">
                     護理指南
                 </button>
             </div>
@@ -555,32 +555,28 @@
         });
     </script>
     <script>
-        //護理指南叫出
         document.addEventListener('DOMContentLoaded', function() {
-            function setupClickListener() {
-                // 打開 lightbox
-                var careButton = document.getElementById('product-carebtn');
-                if (careButton) {
-                    careButton.addEventListener('click', function() {
-                        var lightbox = document.getElementById('product-lightbox');
-                        if (lightbox) {
-                            lightbox.style.display = 'block'; // 顯示 lightbox
-                        }
-                    });
-                }
-
-                // 關閉 lightbox
-                var closeLightboxButton = document.getElementById('product-lightbox-xxbox');
-                if (closeLightboxButton) {
-                    closeLightboxButton.addEventListener('click', function() {
-                        var lightbox = document.getElementById('product-lightbox');
-                        if (lightbox) {
-                            lightbox.style.display = 'none'; // 隱藏 lightbox
-                        }
-                    });
+            function openLightbox() {
+                var lightbox = document.getElementById('product-lightbox');
+                if (lightbox) {
+                    lightbox.style.display = 'block'; // 顯示 lightbox
                 }
             }
-
+    
+            function closeLightbox() {
+                var lightbox = document.getElementById('product-lightbox');
+                if (lightbox) {
+                    lightbox.style.display = 'none'; // 隱藏 lightbox
+                }
+            }
+    
+            function setupClickListener(buttonId, clickHandler) {
+                var button = document.getElementById(buttonId);
+                if (button) {
+                    button.addEventListener('click', clickHandler);
+                }
+            }
+    
             function setupScrollPrevention() {
                 // 阻止滾動事件冒泡
                 var lightboxCard = document.getElementById('product-lightbox-card');
@@ -590,20 +586,21 @@
                     });
                 }
             }
-
+    
             function checkMediaQuery() {
-                if (window.matchMedia('(max-width: 600px)').matches) {
-                    // 如果視窗寬度小於或等於 600px
-                    setupClickListener();
+                if (window.matchMedia('(max-width: 2000px)').matches) {
+                    // 如果視窗寬度小於或等於 2000px
+                    setupClickListener('product-carebtn', openLightbox);
+                    setupClickListener('product-carebtn-pc', openLightbox); // 為 product-carebtn-pc 按鈕添加事件監聽器
+                    setupClickListener('product-lightbox-xxbox', closeLightbox);
                     setupScrollPrevention();
                 }
             }
-
+    
             window.addEventListener('resize', checkMediaQuery);
-
             checkMediaQuery();
         });
-
     </script>
+    
 </body>
 </html>
